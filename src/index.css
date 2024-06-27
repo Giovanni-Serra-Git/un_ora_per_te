@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
+
+.container {
+  width: 85%;
+  margin-inline: auto;
+}
+
+
+.poppins {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 15.4px */
+  letter-spacing: -0.28px;
+  text-transform: capitalize;
+}
+
 @tailwind utilities;
+
+@layer utilities {
+
+    .mx-auto {
+        margin-inline: auto;
+    }
+
+    .fit-content {
+      width: fit-content;
+    }
+
+    .heading-playfair {
+       font-family: theme("fontFamily.PlayFair");
+       font-style: italic;
+       font-size: clamp(40px, calc(40px + (56 - 40) * ((100vw - 350px) / (1024 - 350))), 56px);
+       color: theme("colors.brown.100");
+       font-weight: 700;
+    }
+
+    .subheading {
+      font-family: theme("fontFamily.PlayFair");
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 110%; /* 35.2px */
+      letter-spacing: -1.28px;
+      text-transform: capitalize;
+    }
+
+    .title-gallery-homepage {
+      color: #FFF;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%; /* 26.4px */
+      letter-spacing: -0.48px;
+      text-transform: capitalize;
+    }
+
+    .playfair {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 110%; /* 35.2px */
+      text-transform: capitalize;
+    }
+    
+
+  }
+

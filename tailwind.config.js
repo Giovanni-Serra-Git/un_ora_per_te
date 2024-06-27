@@ -5,7 +5,26 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        '-1': '-1',
+      },
+      colors: {
+        pink: {
+          100: "#FFF5F8",
+          200: "#FFB3C6",
+          300: "#FF4D7C",
+          400: "#ff3369",
+        },
+        brown: {
+          100: "#66001B",
+        }
+      },
+      fontFamily: {
+        "Poppins": "Poppins",
+        "PlayFair": ['Playfair Display', 'serif']
+      }
+    },
   },
   plugins: [],
 }

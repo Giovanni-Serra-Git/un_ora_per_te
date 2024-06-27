@@ -1,8 +1,15 @@
-
-import './index.css'
+import {Helmet} from "react-helmet"
+import HomePage from "./components/homepage/homepage"
 
 function App() {
-  return <div className='text-lime-500'>Hello Moto</div>
+  return (
+    <>
+      <Helmet>
+        <meta name="description" content="Home Page Centro Estetico Un'ora per te"/>
+      </Helmet>
+      <HomePage />
+    </>
+  )
 }
 
 export default App
