@@ -16,6 +16,14 @@
   text-transform: capitalize;
 }
 
+.heading-playfair {
+  font-family: theme("fontFamily.PlayFair");
+  font-style: italic;
+  font-size: clamp(40px, calc(40px + (56 - 40) * ((100vw - 350px) / (1024 - 350))), 56px);
+  color: theme("colors.brown.100");
+  font-weight: 700;
+}
+
 @tailwind utilities;
 
 @layer utilities {
@@ -26,14 +34,6 @@
 
     .fit-content {
       width: fit-content;
-    }
-
-    .heading-playfair {
-       font-family: theme("fontFamily.PlayFair");
-       font-style: italic;
-       font-size: clamp(40px, calc(40px + (56 - 40) * ((100vw - 350px) / (1024 - 350))), 56px);
-       color: theme("colors.brown.100");
-       font-weight: 700;
     }
 
     .subheading {

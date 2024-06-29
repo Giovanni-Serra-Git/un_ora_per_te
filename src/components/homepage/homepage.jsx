@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import Footer from "../footer/footer"
-import Navbar from "../navbar/navbar"
 import Sidenavbar from "../navbar/sidenavbar"
 import ItemGallery from "./itemGallery"
 import Button from "../button/button"
@@ -9,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import Decoration from "../../assets/decoration/decoration"
 
 const imagesToSlide = [
     "1",
@@ -70,26 +70,38 @@ function HomePage() {
     return (
         <>
          <div>
+
+            {/* HERO SECTION */}
             
             <div className="bg-pink-100 relative z-20">
                 <div className="container text-center flex flex-col items-center">
                     <Sidenavbar/>
-                    <Navbar />
-                    <h1 className="heading-playfair my-10">Ci prendiamo cura della tua bellezza e del tuo benessere</h1>
-                    <p className="font-Poppins text-[12px] text-brown-100 font-normal">Riscopri la tua bellezza con i nostri trattamenti personalizzati: prenota ora un appuntamento e affidati agli esperti di benessere e bellezza.</p>
-                    <Button title="contattaci" url="/contatti" />
-                    <div className="relative w-[50%] max-w-[245px] z-20">
-                        <img className="relative" src="../../../assets/homepage/woman.png" alt={`${alt} Immagine Donna`} />
-                        <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${alt}Immagine pianta vicina alla donna`}/>
+                    <div className="flex flex-col items-center md:flex-row md:justify-between">
+
+                        <div className="md:basis-[60%] md:text-left z-40">
+                            <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px]">Ci prendiamo cura della 
+                            tua bellezza e del tuo benessere</h1>
+                            <p className="font-Poppins text-[12px] text-brown-100 font-normal">Riscopri la tua bellezza con i nostri trattamenti personalizzati: prenota ora un appuntamento e affidati agli esperti di benessere e bellezza.</p>
+                            <Button title="contattaci" url="/contatti" />
+                        </div>
+
+                        <div className="relative w-[50%] max-w-[245px] z-20 md:max-w-[30%] md:basis-[45%]">
+                            <img className="relative" src="../../../assets/homepage/woman.png" alt={`${alt} Immagine Donna`} />
+                            <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${alt}Immagine pianta vicina alla donna`}/>
+                        </div>
+
                     </div>
                 </div>
-                <div className="h-[45vh] bg-pink-200 relative mt-[-10%]">
-                </div>
+                <div className="h-[45vh] mt-[-10%] bg-pink-200 relative md:mt-[-5%]"></div>
             </div>
+
+
+            {/* TRATTAMENTI PERSONALIZZATI */}
 
             <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20">
                     <p className="subheading text-brown mt-6 mb-6 text-center text-brown-100">trattamenti personalizzati</p>
-                    <div className="flex flex-col items-center gap-4">
+                    <Decoration props="hidden md:block mx-auto mb-6" />
+                    <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center">
                         { 
                             gallery.map((item, index) => <ItemGallery key={index} src={item.url} title={item.title} />)
                          }
@@ -100,12 +112,13 @@ function HomePage() {
                 <div className="container flex flex-col items-center">
                     <p className="poppins text-brown-100 text-[14px] letter-spacing-[-0.28px] mb-6 mt-6">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
                     <p className="playfair text-brown-100 text-[32px] letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
+                    <Decoration props="hidden md:block mx-auto mb-6" />
                     <p className="poppins text-brown-100 text-[12px] leading-[140%] font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <Button url="/chi-siamo" title="conosci lo staff" />
                 </div>
 
-
+               {/* STAFF */}
                 <div className="container flex items-center justify-between mt-10 mb-10">
                     <div className="w-[40%] self-end">
                         <img src="../../../assets/homepage/staff/stone.png" alt={`${alt}Immagine di pietre da massaggio in pila`} />
@@ -121,9 +134,13 @@ function HomePage() {
                             </div>
                         </div>
                 </div>
+
+                {/* MACCHINARI AD ALTA TECNOLOGIA */}
+
                 <div className="bg-brown-100 text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
                         <p className="playfair pt-8 pb-8 text-[32px]">macchinari ad alta tecnologia</p>
+                        <Decoration props="hidden md:block mx-auto mb-6" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <div className="container bg-brown-100">
@@ -132,8 +149,12 @@ function HomePage() {
                     </div>
                 </div>
             </div>
+
+            {/* SICUREZZA E IGIENE */}
+
             <div className="container mb-6 mt-6 flex flex-col items-center">
                 <p className="playfair text-brown-100 text-[32px] tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
+                <Decoration props="hidden md:block mx-auto mb-6" />
                 <p className="poppins text-brown-100 text-[12px] leading-[140%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 <Button url="/chi-siamo" title="scopri di più" />

@@ -23,6 +23,10 @@ export default {
       fontFamily: {
         "Poppins": "Poppins",
         "PlayFair": ['Playfair Display', 'serif']
+      },
+      screens: {
+        "md": "950px",
+        "lg": "1100px"
       }
     },
   },

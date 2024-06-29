@@ -2,10 +2,12 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./logo"
 import { forwardRef, useRef } from "react";
+import Navbar from "../navbar/navbar"
+
 
 function ButtonOpenSidePanel({onClick}) {
   return (
-      <div className="cursor-pointer" onClick={onClick}>
+      <div className=" md:hidden cursor-pointer" onClick={onClick}>
           <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FF4D7C ">
               <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
               <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
@@ -83,6 +85,7 @@ function Sidenavbar() {
       <nav className="flex justify-between items-center py-6 w-[100%]">
         <Logo />
         <ButtonOpenSidePanel onClick={() => { ref.current.style.width = "100vw" }} />
+        <Navbar />
       </nav> 
 
       </>
