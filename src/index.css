@@ -65,6 +65,10 @@
       line-height: 110%; /* 35.2px */
       text-transform: capitalize;
     }
+
+    .clamp-poppins {
+      font-size: clamp(12px, 2vw, 16px);
+    }
     
 
   }
