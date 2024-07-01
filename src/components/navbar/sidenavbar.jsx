@@ -83,7 +83,9 @@ function Sidenavbar() {
        <ForwardSidePanel ref={ref} onClick={() => { ref.current.style.width = "0" }}/>
 
       <nav className="flex justify-between items-center py-6 w-[100%]">
-        <Logo />
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
         <ButtonOpenSidePanel onClick={() => { ref.current.style.width = "100vw" }} />
         <Navbar />
       </nav> 

@@ -12,6 +12,7 @@ export default {
       colors: {
         pink: {
           100: "#FFF5F8",
+          150: "#FFE5EC",
           200: "#FFB3C6",
           300: "#FF4D7C",
           400: "#ff3369",

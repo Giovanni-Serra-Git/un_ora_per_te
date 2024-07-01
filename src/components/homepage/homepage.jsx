@@ -31,8 +31,20 @@ function SimpleSlider() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 2,
+    slidesToScroll: 2,
+
+    responsive: [
+        {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+    ]
   };
 
   return (
@@ -96,7 +108,7 @@ function HomePage() {
             </div>
 
 
-            {/* TRATTAMENTI PERSONALIZZATI */}
+            {/* TRATTAMENTI PERSONALIZZATI */} 
 
             <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20 lg-items-start">
                 <div className="lg:w-[95%] lg:ml-auto">
@@ -110,12 +122,13 @@ function HomePage() {
                     </div> 
                     <Button title="scopri i nostri trattamenti" url="/servizi" />
                 </div>
-            <div>
-                <div className="container flex flex-col items-center">
+
+            <div className="container md:flex">
+                <div className="container flex flex-col items-center lg:items-start">
                     <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
                     <div>
                         <p className="playfair text-brown-100 text-[32px] letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
-                        <Decoration props="hidden md:block fit-content mx-auto mb-6" />
+                        <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
                     <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -139,9 +152,12 @@ function HomePage() {
                         </div>
                 </div>
 
-                {/* MACCHINARI AD ALTA TECNOLOGIA */}
+            </div>
 
-                <div className="bg-brown-100 text-white text-center pt-6 pb-6">
+            {/* MACCHINARI AD ALTA TECNOLOGIA */}
+
+
+            <div className="bg-brown-100 text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
                         <div>
                             <p className="playfair pt-8 pb-8 text-[32px]">macchinari ad alta tecnologia</p>
@@ -153,19 +169,25 @@ function HomePage() {
                         <SimpleSlider  />
                         <Button url="/servizi" title="scopri di più" />
                     </div>
-                </div>
             </div>
 
             {/* SICUREZZA E IGIENE */}
 
-            <div className="container mb-6 mt-6 flex flex-col items-center">
-                <div>
-                    <p className="playfair text-brown-100 text-[32px] tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
-                    <Decoration props="hidden md:block fit-content mx-auto mb-6" />
+            <div className="container mb-6 mt-6 relative">
+                <div className="flex flex-col items-center">
+                    <div>
+                        <p className="playfair text-brown-100 text-[32px] tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
+                        <Decoration props="hidden md:block fit-content mx-auto mb-6" />
+                    </div>
+                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins md:w-[65%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <Button url="/chi-siamo" title="scopri di più" />
+                    <div>
+                        <img src="../../assets/homepage/igiene_e_sicurezza/plant.png"
+                         alt={alt + "Immagine di una pianta"}
+                        className="absolute right-0 bottom-0 hidden md:block md:max-w-[160px]"/>
+                    </div>
                 </div>
-                <p className="poppins text-brown-100 text-[12px] leading-[140%] clamp-poppins">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <Button url="/chi-siamo" title="scopri di più" />
             </div>
             <Footer />
 
