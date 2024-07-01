@@ -1,21 +1,22 @@
 import { Fragment } from "react";
 import Footer from "../footer/footer"
 import Sidenavbar from "../navbar/sidenavbar"
+import Decoration from "../../assets/decoration/decoration";
 
-const alt = "Centro Estetico | Un ora per te "; 
+const alt = "Estetica un'ora per te | "; 
 
 const servizi = {
 
     viso: {
         title: "viso",
-        subTitle: "trattamenti singoli o percorsi a seconda del tipo di inestetismo del viso",
+        subTitle: "Trattamenti singoli o percorsi a seconda del tipo di inestetismo del viso",
         urlPicture: "../../assets/servizi/viso.png",
         pictureAltDescription: "Immagine trattamento viso donna",
         listServices: {
             viso: [
                 {
                     title: "Pulizia viso",
-                    description: "trattamento di pulizia completa con schiacciatura massaggio viso e maschera finale",
+                    description: "Trattamento di pulizia completa con schiacciatura massaggio viso e maschera finale",
                     price: "€30",
                 },
                 {
@@ -58,7 +59,7 @@ const servizi = {
     },
     corpo: {
         title: "corpo",
-        subTitle: "trattamenti di massaggio, percorsi con macchinari o manuali a 360 gradi a seconda del tipo di cellulite, della tonificazione o del drenaggio dei liquidi",
+        subTitle: "Trattamenti di massaggio, percorsi con macchinari o manuali a 360 gradi a seconda del tipo di cellulite, della tonificazione o del drenaggio dei liquidi",
         urlPicture: "../../assets/servizi/corpo.png",
         pictureAltDescription: "Immagine di una donna che riceve un massaggio",
         listServices: [
@@ -92,37 +93,189 @@ const servizi = {
                 price: "€20", 
             },
             {
-                title: "",
-                description: "",
-                price: "€",   
+                title: "Starvac",
+                description: "trattamento intensivo anticellulite basato su macchinario che con sistema vacuum fa un massaggio connettivale a livello profondo con durata di 45 min trattando tutto il corpo",
+                price: "€40",   
             },
             {
-                title: "",
-                description: "",
-                price: "€",   
+                title: "Massaggio pietre calde",
+                description: "massaggio rilassante su tutto il corpo effettuato con pietre calde",
+                price: "€40",   
             },
             {
-                title: "",
-                description: "",
-                price: "€",   
+                title: "Scrub corpo",
+                description: "esfoliazione corpo con doccia per rinnovare la pelle e portarla a nuova vita",
+                price: "€30",   
             },
             {
-                title: "",
-                description: "",
-                price: "€",   
+                title: "Massaggio bamboo",
+                description: "massaggio gambe specifico anticellulite effettuato attraverso legnetti di bamboo",
+                price: "€30",   
+            }
+        ],
+        epilazione: {
+            title: "Epilazione",
+            subTitle: "Sedute di epilazione con ceretta",
+            urlPicture: "../../assets/servizi/epilazione.jpg",
+            pictureAltDescription: "Immagine di una procedura di epilazione",
+            gender: {
+                donna: [
+                    {
+                        description: "Gamba (compresa inguine parziale)",
+                        price: "€25"
+                    },
+                    {
+                        description: "1/2 gamba",
+                        price: "€10"
+                    },
+                    {
+                        description: "Inguine parziale",
+                        price: "€5"
+                    },
+                    {
+                        description: "Inguine totale",
+                        price: "€10"
+                    },
+                    {
+                        description: "Ascelle",
+                        price: "€5"
+                    },
+                    {
+                        description: "Sopracciglia",
+                        price: "€5"
+                    },
+                    {
+                        description: "Labiale",
+                        price: "€5"
+                    },
+
+                ],
+                uomo: [
+                    {
+                        description: "Addome",
+                        price: "€25"
+                    },
+                    {
+                        description: "Schiena",
+                        price: "€20"
+                    },
+                ]
+            }
+        },
+        laser: {
+            title: "Laser",
+            subTitle: "Macchinario di ultima generazione esthelogue trattamento di epilazione definitiva in più sedute per essere sempre liscia",
+            urlPicture: "../../assets/servizi/laser.jpg",
+            pictureAltDescription: "Immagine di macchinario laser che sta effettuando trattamento specifico per rimozione peli",
+            offer: "Possibilita di Pacchetti su più sedute e per più parti del corpo !!",
+            listServices: [
+                {
+                    description: "Gamba",
+                    price: "€90"
+                },
+                {
+                    description: "Ascella",
+                    price: "€30"
+                },
+                {
+                    description: "Inguine parziale",
+                    price: "€30"
+                },
+                {
+                    description: "Inguine totale",
+                    price: "€40"
+                },
+                {
+                    description: "Labiale",
+                    price: "€20"
+                },
+                {
+                    description: "Mento",
+                    price: "€20"
+                },
+                {
+                    description: "Braccia",
+                    price: "€40"
+                },
+                {
+                    description: "Schiena",
+                    price: "€40"
+                },
+                {
+                    description: "Addome",
+                    price: "€40"
+                },
+            ]
+        }
+    },
+    mani: {
+        title: "Mani",
+        urlPicture: "../../assets/servizi/mani.jpg",
+        pictureAltDescription: "Immagine trattamento mani donna",
+        listServices: [
+            {
+                description: "Manicure semplice con smalto normale",
+                price: "€10",
             },
             {
-                title: "",
-                description: "",
-                price: "€",   
+                description: "Cambio smalto - limatura unghie e cambio smalto normale",
+                price: "€5",
+            },
+            {
+                description: "Manicure con semipermanente - Manicure e applicazione semipermanente",
+                price: "€20",
+            },
+            {
+                description: "Manicure gel copertura unghia naturale",
+                price: "€30",
+            },
+            {
+                description: "Manicure gel con allungamento unghia",
+                price: "€40",
+            },
+            {
+                description: "Trattamento Manicure a paraffina - Manicure semplice e trattamento per mani secche con bagno di paraffina idratante e nutriente",
+                price: "€20",
+            },
+        ]
+    },
+    piedi: {
+        title: "Piedi",
+        urlPicture: "../../assets/servizi/piedi.jpg",
+        pictureAltDescription: "Immagine di pedicure",
+        listServices: [
+            {
+                description: "Pedicure - Pedicure classica con smalto normale",
+                price: "€20"
+            },
+            {
+                description: "Pedicure con semipermanente - Pedicure classica con applicazione smalto semipermanente",
+                price: "€25"
+            },
+            {
+                description: "Cambio semipermanente - Taglio e limatura unghie e cambio smalto semipermanente",
+                price: "€20"
+            }, 
+            {
+                description: "Pedicure con trattamento paraffina - Pedicure classico con trattamento paraffina adatto a chi ha problemi di forte secchezza idratazione e nutrimento a lunga durata",
+                price: "€30"
             },
         ]
     }
 }
 
+// {
+//     title: "",
+//     description: "",
+//     price: "€",   
+// },
+
 const viso = servizi.viso;
 const corpo = servizi.corpo;
-
+const epilazione = servizi.corpo.epilazione;
+const laser = servizi.corpo.laser;
+const mani = servizi.mani;
+const piedi = servizi.piedi;
 
 function Services() {
     return (
@@ -136,8 +289,11 @@ function Services() {
 
         <div className="container">
             <div>
-                <h1>{viso.title}</h1>
-                <p>{viso.subTitle}</p>
+                <div>
+                    <h1 className="titleServices">{viso.title}</h1>
+                    <Decoration props="my-6" />
+                </div>
+                <p className="subTitleServices">{viso.subTitle}</p>
             </div>
             <div>
                 <img src={viso.urlPicture} alt={alt + viso.pictureAltDescription} />
@@ -147,21 +303,21 @@ function Services() {
                     viso.listServices.viso.map((item, index) => {
                         return (
                         <div key={index}>
-                            <p>{item.title}</p>
-                            <p>{item.description}</p>
-                            <p>{item.price}</p>
+                            <p className="itemServicesTitle">{item.title}</p>
+                            <p className="itemServicesDescription text-brown-100">{item.description}</p>
+                            <p className="itemServicesPrice clamp-price">{item.price}</p>
                         </div>
                         )
                     })
                 }
-                    <p>{viso.listServices.ciglia.title}</p>
+                    <p className="subheading my-4">{viso.listServices.ciglia.title}</p>
                 {
                     viso.listServices.ciglia.listServices.map((item,index) => {
                         return (
                             <div key={index}>
-                                <p>{item.title}</p>
-                                <p>{item.description}</p>
-                                <p>{item.price}</p>
+                                <p className="itemServicesTitle">{item.title}</p>
+                                <p className="itemServicesDescription text-brown-100">{item.description}</p>
+                                <p className="itemServicesPrice clamp-price">{item.price}</p>
                             </div>
                         )
                     })
@@ -172,30 +328,31 @@ function Services() {
         <div className="bg-pink-150">
                 <div className="container">
                     <div>
-                        <h1>{corpo.title}</h1>
-                        <p>{corpo.subTitle}</p>
+                        <h1 className="titleServices">{corpo.title}</h1>
+                        <Decoration props="my-6" />
+                        <p className="subTitleServices">{corpo.subTitle}</p>
                     </div>
                     <div>
-                        <img src={viso.urlPicture} alt={alt + viso.pictureAltDescription} />
+                        <img src={corpo.urlPicture} alt={alt + corpo.pictureAltDescription} />
                     </div>
                     <div>
                         {
                             corpo.listServices.map((item,index) => {
                                 return (
                                     <div key={index}>
-                                        <p>{item.title}</p>
-                                        <p>{item.description}</p>
+                                        <p className="itemServicesTitle">{item.title}</p>
+                                        <p className="itemServicesDescription">{item.description}</p>
                                         {item.duration ? 
                                         <div>
                                             {item.duration.map((durationItem,durationIndex) => {
                                                 return (
                                                     <Fragment key={durationIndex}>
-                                                        <p>{durationItem.description}</p>
-                                                        <p>{durationItem.price}</p>
+                                                        <p className="itemServicesDescription">{durationItem.description}</p>
+                                                        <p className="itemServicesPrice clamp-price">{durationItem.price}</p>
                                                     </Fragment>
                                                 )
                                             })}
-                                        </div> : <p>{item.price}</p>
+                                        </div> : <p className="itemServicesPrice clamp-price">{item.price}</p>
                                         }
                                     </div>
                                 )
@@ -203,7 +360,111 @@ function Services() {
                         }
                     </div>
                 </div>
+        </div>
+
+        <div className="container">
+                <div>
+                    <p className="titleServices">{epilazione.title}</p>
+                    <Decoration props="my-6" />
+                    <p className="subTitleServices">{epilazione.subTitle}</p>
+                </div>
+                <div>
+                    <img src={epilazione.urlPicture} alt={alt} />
+                </div>
+                <div>
+                    <p className="titleServices">donna</p>
+                    <Decoration props="my-6" />
+                    <div>
+                        {epilazione.gender.donna.map((item,index) => {
+                            return (
+                                <div key={index}>
+                                    <p className="itemServicesTitle">{item.description}</p>
+                                    <p className="itemServicesPrice clamp-price">{item.price}</p>
+                                </div>
+                            )
+                        })}
+                        <p></p>
+                    </div>
+                </div>
+                <div>
+                    <p className="titleServices">uomo</p>
+                    <Decoration props="my-6" />
+                    <div>
+                        {epilazione.gender.uomo.map((item,index) => {
+                            return (
+                                <div key={index}>
+                                    <p className="itemServicesTitle">{item.description}</p>
+                                    <p className="itemServicesPrice clamp-price">{item.price}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+        </div>
+
+        <div className="container">
+            <div>
+                <p className="titleServices">{laser.title}</p>
+                <p className="subTitleServices">{laser.subTitle}</p>
+                <p className="subTitleServices">{laser.offer}</p>
             </div>
+            <div>
+                <img src={laser.urlPicture} alt={alt + laser.pictureAltDescription} />
+            </div>
+            <div>
+                {laser.listServices.map((item,index) => {
+                    return (
+                        <div key={index}>
+                            <p className="itemServicesTitle">{item.description}</p>
+                            <p className="itemServicesPrice clamp-price">{item.price}</p>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+
+        <div className="bg-pink-150">
+            <div className="container">
+                <div>
+                    <p className="titleServices">{mani.title}</p>
+                    <Decoration props="my-6" />
+                    {/* <p>{mani.subTitle}</p> */}
+                </div>
+                <div>
+                    <img src={mani.urlPicture} alt={mani.pictureAltDescription} />
+                </div>
+                <div>
+                    {mani.listServices.map((item,index) => {
+                        return (
+                            <div key={index}>
+                                <p className="itemServicesTitle">{item.description}</p>
+                                <p className="itemServicesPrice clamp-price">{item.price}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        </div>
+
+        <div className="container">
+            <div>
+                <p className="titleServices">{piedi.title}</p>
+                <Decoration props="my-6" />
+            </div>
+            <div>
+                <img src={piedi.urlPicture} alt={alt + piedi.pictureAltDescription} />
+            </div>
+            <div>
+                {piedi.listServices.map((item,index) => {
+                    return (
+                        <div key={index}>
+                            <p className="itemServicesTitle">{item.description}</p>
+                            <p className="itemServicesPrice clamp-price">{item.price}</p>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
 
             <Footer />
        </>

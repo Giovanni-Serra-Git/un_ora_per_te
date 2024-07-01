@@ -56,7 +56,7 @@ function SimpleSlider() {
   );
 }
 
-const alt = "Centro Estetico | Un ora per te "; 
+const alt = "Estetica un'ora per te | ";  
 
 const gallery = [
     {
@@ -93,7 +93,7 @@ function HomePage() {
                         <div className="md:basis-[60%] md:text-left z-40">
                             <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px]">Ci prendiamo cura della 
                             tua bellezza e del tuo benessere</h1>
-                            <p className="font-Poppins text-brown-100 font-normal clamp-poppins">Riscopri la tua bellezza con i nostri trattamenti personalizzati: prenota ora un appuntamento e affidati agli esperti di benessere e bellezza.</p>
+                            <p className="font-Poppins text-brown-100 font-normal clamp-poppins-normal">Riscopri la tua bellezza con i nostri trattamenti personalizzati: prenota ora un appuntamento e affidati agli esperti di benessere e bellezza.</p>
                             <Button classes="md:mx-0" title="contattaci" url="/contatti" />
                         </div>
 
@@ -112,7 +112,7 @@ function HomePage() {
 
             <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20 lg-items-start">
                 <div className="lg:w-[95%] lg:ml-auto">
-                    <p className="subheading text-brown mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
+                    <p className="subheading mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
                     <Decoration props="hidden mx-auto fit-content mb-6 md:block lg:w-[100%]" />
                 </div>
                     <div className="flex flex-col items-center  gap-4 md:flex-row md:flex-wrap md:justify-center md:items-stretch">
@@ -125,12 +125,12 @@ function HomePage() {
 
             <div className="container md:flex">
                 <div className="container flex flex-col items-center lg:items-start">
-                    <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
+                    <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins-normal">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
                     <div>
                         <p className="playfair text-brown-100 text-[32px] letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <Button url="/chi-siamo" title="conosci lo staff" />
                 </div>
@@ -163,7 +163,7 @@ function HomePage() {
                             <p className="playfair pt-8 pb-8 text-[32px]">macchinari ad alta tecnologia</p>
                             <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                         </div>
-                        <p className="poppins text-white leading-[140%] font-normal clamp-poppins">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <div className="container bg-brown-100">
                         <SimpleSlider  />
@@ -179,7 +179,7 @@ function HomePage() {
                         <p className="playfair text-brown-100 text-[32px] tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins md:w-[65%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <Button url="/chi-siamo" title="scopri di più" />
                     <div>

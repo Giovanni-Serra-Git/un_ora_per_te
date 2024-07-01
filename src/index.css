@@ -24,6 +24,8 @@
   font-weight: 700;
 }
 
+
+
 @tailwind utilities;
 
 @layer utilities {
@@ -38,7 +40,7 @@
 
     .subheading {
       font-family: theme("fontFamily.PlayFair");
-      font-size: 32px;
+      font-size: clamp(26px, 2.5vw, 32px);
       font-style: italic;
       font-weight: 700;
       line-height: 110%; /* 35.2px */
@@ -66,8 +68,42 @@
       text-transform: capitalize;
     }
 
-    .clamp-poppins {
+    .clamp-poppins-normal {
       font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .clamp-poppins-md {
+      font-size: clamp(20px, 2.5vw, 24px);
+    }
+
+    .clamp-poppins-lg {
+      font-size: clamp(24px, 2.5vw, 32px);
+    }
+
+    .clamp-price {
+      font-size: clamp(16px, 2vw, 20px);
+    }
+
+    /* Services */
+
+    .titleServices {
+      @apply subheading my-4 py-4
+    }
+
+    .subTitleServices {
+      @apply clamp-poppins-md my-6
+    }
+
+    .itemServicesTitle {
+      @apply clamp-poppins-md text-brown-100 font-bold
+    }
+
+    .itemServicesDescription {
+      @apply clamp-poppins-normal font-normal
+    }
+
+    .itemServicesPrice {
+      @apply clamp-price text-pink-300 font-bold
     }
     
 
