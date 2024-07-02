@@ -50,7 +50,7 @@ const servizi = {
                     },
                     {
                         title: "Tinta sopracciglia",
-                        description: "epilazione e tinta sopracciglia",
+                        description: "Epilazione e tinta sopracciglia",
                         price: "€10"
                     }   
                 ]
@@ -264,12 +264,6 @@ const servizi = {
     }
 }
 
-// {
-//     title: "",
-//     description: "",
-//     price: "€",   
-// },
-
 const viso = servizi.viso;
 const corpo = servizi.corpo;
 const epilazione = servizi.corpo.epilazione;
@@ -295,35 +289,52 @@ function Services() {
                 </div>
                 <p className="subTitleServices">{viso.subTitle}</p>
             </div>
-            <div>
-                <img src={viso.urlPicture} alt={alt + viso.pictureAltDescription} />
+        </div>
+        <div className="flex justify-center">
+            <div className="rounded-xl relative w-[90%] md:w-[80%]">
+                <img className="hidden md:block max-w-[100px] rotate-[90deg] absolute left-[-90px] top-0" src="../../assets/servizi/leaf.png" alt={alt + "Immagine di una foglia"} />
+                <img className="rounded-xl" src={viso.urlPicture} alt={alt + viso.pictureAltDescription} />
             </div>
-            <div>
+        </div>
+        <div className="container">
+        <div className="md:flex md:flex-wrap">
                 {
                     viso.listServices.viso.map((item, index) => {
                         return (
-                        <div key={index}>
-                            <p className="itemServicesTitle">{item.title}</p>
-                            <p className="itemServicesDescription text-brown-100">{item.description}</p>
-                            <p className="itemServicesPrice clamp-price">{item.price}</p>
+                        <div key={index} className="md:w-1/3 md:flex md:justify-center">
+                            <div className="md:w-[80%] mt-2 mb-2 flex flex-col justify-between">
+                                <p className="itemServicesTitle">{item.title}</p>
+                                <div className="flex flex-col justify-between grow">
+                                    <p className="itemServicesDescription text-brown-100">{item.description}</p>
+                                    <p className="itemServicesPrice clamp-price">{item.price}</p>
+                                </div>
+                            </div>
                         </div>
                         )
                     })
                 }
-                    <p className="subheading my-4">{viso.listServices.ciglia.title}</p>
+            </div>
+            <p className="subheading my-4">{viso.listServices.ciglia.title}</p>
+            <div className="md:flex md:flex-wrap">
+
                 {
                     viso.listServices.ciglia.listServices.map((item,index) => {
                         return (
-                            <div key={index}>
-                                <p className="itemServicesTitle">{item.title}</p>
-                                <p className="itemServicesDescription text-brown-100">{item.description}</p>
-                                <p className="itemServicesPrice clamp-price">{item.price}</p>
+                            <div key={index} className="md:w-1/3 md:flex md:justify-center">
+                               <div className="md:w-[80%] mt-2 mb-2 flex flex-col justify-between">
+                                    <p className="itemServicesTitle">{item.title}</p>
+                                    <div className="flex flex-col justify-between grow">
+                                        <p className="itemServicesDescription text-brown-100">{item.description}</p>
+                                        <p className="itemServicesPrice clamp-price">{item.price}</p>
+                                    </div>
+                               </div>
                             </div>
                         )
                     })
                 }
             </div>
         </div>
+
 
         <div className="bg-pink-150">
                 <div className="container">
@@ -335,25 +346,31 @@ function Services() {
                     <div>
                         <img src={corpo.urlPicture} alt={alt + corpo.pictureAltDescription} />
                     </div>
-                    <div>
+                    <div className="md:flex md:flex-wrap">
                         {
                             corpo.listServices.map((item,index) => {
                                 return (
-                                    <div key={index}>
-                                        <p className="itemServicesTitle">{item.title}</p>
-                                        <p className="itemServicesDescription">{item.description}</p>
-                                        {item.duration ? 
-                                        <div>
-                                            {item.duration.map((durationItem,durationIndex) => {
-                                                return (
-                                                    <Fragment key={durationIndex}>
-                                                        <p className="itemServicesDescription">{durationItem.description}</p>
-                                                        <p className="itemServicesPrice clamp-price">{durationItem.price}</p>
-                                                    </Fragment>
-                                                )
+                                    <div key={index} className="md:w-1/3 md:flex md:justify-center">
+                                        <div className="md:w-[80%] mt-2 mb-2 flex flex-col justify-between" >
+                                            <p className="itemServicesTitle">{item.title}</p>
+                                            <div className="flex flex-col justify-between grow">
+                                            <p className="itemServicesDescription">{item.description}</p>
+                                            {
+                                                item.duration ? 
+                                                <div>
+                                                    {item.duration.map((durationItem,durationIndex) => {
+                                                    return (
+                                                        <Fragment key={durationIndex}>
+                                                            <p className="itemServicesDescription">{durationItem.description}</p>
+                                                            <p className="itemServicesPrice clamp-price">{durationItem.price}</p>
+                                                        </Fragment>
+                                                    )
                                             })}
-                                        </div> : <p className="itemServicesPrice clamp-price">{item.price}</p>
-                                        }
+                                                </div> : <p className="itemServicesPrice clamp-price">{item.price}</p>
+                                            }
+                                            </div>
+                                        </div>
+
                                     </div>
                                 )
                             })
@@ -368,39 +385,50 @@ function Services() {
                     <Decoration props="my-6" />
                     <p className="subTitleServices">{epilazione.subTitle}</p>
                 </div>
-                <div>
-                    <img src={epilazione.urlPicture} alt={alt} />
-                </div>
-                <div>
-                    <p className="titleServices">donna</p>
-                    <Decoration props="my-6" />
-                    <div>
-                        {epilazione.gender.donna.map((item,index) => {
-                            return (
-                                <div key={index}>
-                                    <p className="itemServicesTitle">{item.description}</p>
-                                    <p className="itemServicesPrice clamp-price">{item.price}</p>
-                                </div>
-                            )
-                        })}
-                        <p></p>
-                    </div>
-                </div>
-                <div>
-                    <p className="titleServices">uomo</p>
-                    <Decoration props="my-6" />
-                    <div>
-                        {epilazione.gender.uomo.map((item,index) => {
-                            return (
-                                <div key={index}>
-                                    <p className="itemServicesTitle">{item.description}</p>
-                                    <p className="itemServicesPrice clamp-price">{item.price}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
         </div>
+
+         <div className="flex justify-center rounded-xl">
+            <img className="w-[80%] md-[90%] rounded-xl" src={epilazione.urlPicture} alt={alt} />
+        </div>
+
+    <div className="container flex justify-center">
+        <div className="md:flex md:w-[90%]">
+
+        <div className="md:w-[50%]">
+        <p className="titleServices">donna</p>
+        <Decoration props="my-6" />
+        <div>
+            {epilazione.gender.donna.map((item,index) => {
+                return (
+                    <div key={index} className="flex gap-8 md:block">
+                        <p className="w-[40%] md:w-[100%] flex items-center itemServicesTitle">{item.description}</p>
+                        <p className="w-[60%] md:w-[100%] flex justify-center items-center itemServicesPrice clamp-price">{item.price}</p>
+                    </div>
+            )
+             })}
+            <p></p>
+        </div>
+            </div>
+            <div className="md:w-[50%] md:flex md:flex-col md:items-end">
+                <div>
+                    <p className="titleServices md:text-right">uomo</p>
+                    <Decoration props="my-6 md:fit-content" />
+                </div>
+
+            <div>
+            {epilazione.gender.uomo.map((item,index) => {
+                return (
+                    <div key={index} className="flex md:block">
+                        <p className="itemServicesTitle grow-1">{item.description}</p>
+                        <p className="itemServicesPrice clamp-price grow-2">{item.price}</p>
+                    </div>
+                )
+            })}
+        </div>
+        </div>
+
+        </div>
+    </div>
 
         <div className="container">
             <div>
