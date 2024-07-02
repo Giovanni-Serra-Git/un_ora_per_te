@@ -65,7 +65,7 @@ const servizi = {
         listServices: [
             {
              title: "Massaggio corpo",
-             description: "massaggio manuale stimolante, drenante decontratturante 30 minuti parziale gambe o schiena",
+             description: "massaggio manuale stimolante, drenante decontratturante",
              duration: [
                 {
                     description: "30 minuti parziale gambe o schiena",
@@ -214,27 +214,33 @@ const servizi = {
         pictureAltDescription: "Immagine trattamento mani donna",
         listServices: [
             {
+                title: "Manicure",
                 description: "Manicure semplice con smalto normale",
                 price: "€10",
             },
             {
-                description: "Cambio smalto - limatura unghie e cambio smalto normale",
+                title: "Cambio smalto",
+                description: "Limatura unghie e cambio smalto normale",
                 price: "€5",
             },
             {
-                description: "Manicure con semipermanente - Manicure e applicazione semipermanente",
+                title: "Manicure con semipermanente",
+                description: "Manicure e applicazione semipermanente",
                 price: "€20",
             },
             {
-                description: "Manicure gel copertura unghia naturale",
+                title: "Manicure gel",
+                description: " Manicure gel copertura unghia naturale",
                 price: "€30",
             },
             {
+                title: "Manicure gel",
                 description: "Manicure gel con allungamento unghia",
                 price: "€40",
             },
             {
-                description: "Trattamento Manicure a paraffina - Manicure semplice e trattamento per mani secche con bagno di paraffina idratante e nutriente",
+                title: "Trattamento Manicure a paraffina",
+                description: "Manicure semplice e trattamento per mani secche con bagno di paraffina idratante e nutriente",
                 price: "€20",
             },
         ]
@@ -245,19 +251,23 @@ const servizi = {
         pictureAltDescription: "Immagine di pedicure",
         listServices: [
             {
-                description: "Pedicure - Pedicure classica con smalto normale",
+                title: "Pedicure",
+                description: "Pedicure classica con smalto normale",
                 price: "€20"
             },
             {
-                description: "Pedicure con semipermanente - Pedicure classica con applicazione smalto semipermanente",
+                title: "Pedicure con semipermanente",
+                description: "Pedicure classica con applicazione smalto semipermanente",
                 price: "€25"
             },
             {
-                description: "Cambio semipermanente - Taglio e limatura unghie e cambio smalto semipermanente",
+                title: "Cambio semipermanente",
+                description: "Taglio e limatura unghie e cambio smalto semipermanente",
                 price: "€20"
             }, 
             {
-                description: "Pedicure con trattamento paraffina - Pedicure classico con trattamento paraffina adatto a chi ha problemi di forte secchezza idratazione e nutrimento a lunga durata",
+                title: "Pedicure con trattamento paraffina",
+                description: "Pedicure classico con trattamento paraffina adatto a chi ha problemi di forte secchezza idratazione e nutrimento a lunga durata",
                 price: "€30"
             },
         ]
@@ -270,6 +280,7 @@ const epilazione = servizi.corpo.epilazione;
 const laser = servizi.corpo.laser;
 const mani = servizi.mani;
 const piedi = servizi.piedi;
+
 
 function Services() {
     return (
@@ -343,8 +354,8 @@ function Services() {
                         <Decoration props="my-6" />
                         <p className="subTitleServices">{corpo.subTitle}</p>
                     </div>
-                    <div>
-                        <img src={corpo.urlPicture} alt={alt + corpo.pictureAltDescription} />
+                    <div className="flex justify-center rounded-xl">
+                        <img className="rounded-xl" src={corpo.urlPicture} alt={alt + corpo.pictureAltDescription} />
                     </div>
                     <div className="md:flex md:flex-wrap">
                         {
@@ -391,36 +402,38 @@ function Services() {
             <img className="w-[80%] md-[90%] rounded-xl" src={epilazione.urlPicture} alt={alt} />
         </div>
 
+
     <div className="container flex justify-center">
+
         <div className="md:flex md:w-[90%]">
 
-        <div className="md:w-[50%]">
+        <div className="md:w-[50%] md:flex md:flex-col">
         <p className="titleServices">donna</p>
         <Decoration props="my-6" />
         <div>
             {epilazione.gender.donna.map((item,index) => {
                 return (
-                    <div key={index} className="flex gap-8 md:block">
-                        <p className="w-[40%] md:w-[100%] flex items-center itemServicesTitle">{item.description}</p>
-                        <p className="w-[60%] md:w-[100%] flex justify-center items-center itemServicesPrice clamp-price">{item.price}</p>
+                    <div key={index} className="my-4 flex gap-8 items-center md:my-6">
+                        <p className="w-[70%] md:w-[100%] flex items-center itemServicesTitle">{item.description}</p>
+                        <p className="w-[30%] md:w-[100%] flex justify-center items-center itemServicesPrice clamp-price md:block">{item.price}</p>
                     </div>
             )
              })}
             <p></p>
         </div>
-            </div>
-            <div className="md:w-[50%] md:flex md:flex-col md:items-end">
-                <div>
-                    <p className="titleServices md:text-right">uomo</p>
-                    <Decoration props="my-6 md:fit-content" />
-                </div>
+        </div>
+
+        <div className="md:w-[50%] md:flex md:flex-col md:items-end">
+
+            <p className="titleServices md:text-right">uomo</p>
+            <Decoration props="scale-100 my-6 md:fit-content md:scaleX-1" color="#80ccff" />
 
             <div>
             {epilazione.gender.uomo.map((item,index) => {
                 return (
-                    <div key={index} className="flex md:block">
-                        <p className="itemServicesTitle grow-1">{item.description}</p>
-                        <p className="itemServicesPrice clamp-price grow-2">{item.price}</p>
+                    <div key={index} className="my-4 flex gap-8 items-center md:my-6">
+                        <p className="w-[70%] md:w-[100%] flex items-center itemServicesTitle">{item.description}</p>
+                        <p className="w-[30%] md:w-[100%] flex justify-center items-center itemServicesPrice clamp-price md:block">{item.price}</p>
                     </div>
                 )
             })}
@@ -436,15 +449,19 @@ function Services() {
                 <p className="subTitleServices">{laser.subTitle}</p>
                 <p className="subTitleServices">{laser.offer}</p>
             </div>
-            <div>
-                <img src={laser.urlPicture} alt={alt + laser.pictureAltDescription} />
-            </div>
-            <div>
+        </div>
+
+        <div className="flex justify-center rounded-xl">
+          <img className="w-[80%] md:w-[90%] rounded-xl" src={laser.urlPicture} alt={alt + laser.pictureAltDescription} />
+        </div>
+
+        <div className="container">
+        <div className="flex flex-col md:flex-row flex-wrap">
                 {laser.listServices.map((item,index) => {
                     return (
-                        <div key={index}>
-                            <p className="itemServicesTitle">{item.description}</p>
-                            <p className="itemServicesPrice clamp-price">{item.price}</p>
+                        <div key={index} className="my-4 flex gap-8 md:items-center md:justify-center md:my-6 md:w-[33%]">
+                            <p className="itemServicesTitle w-[70%] md:w-[70%] flex items-center">{item.description}</p>
+                            <p className="itemServicesPrice clamp-price w-[20%] md:w-[30%] flex justify-center items-center itemServicesPrice clamp-price md:block">{item.price}</p>
                         </div>
                     )
                 })}
@@ -458,15 +475,16 @@ function Services() {
                     <Decoration props="my-6" />
                     {/* <p>{mani.subTitle}</p> */}
                 </div>
-                <div>
-                    <img src={mani.urlPicture} alt={mani.pictureAltDescription} />
+                <div className="flex justify-center rounded-xl">
+                    <img className="rounded-xl" src={mani.urlPicture} alt={mani.pictureAltDescription} />
                 </div>
-                <div>
+                <div className="flex flex-col md:flex-row flex-wrap gap-[10px] justify-between">
                     {mani.listServices.map((item,index) => {
                         return (
-                            <div key={index}>
-                                <p className="itemServicesTitle">{item.description}</p>
-                                <p className="itemServicesPrice clamp-price">{item.price}</p>
+                            <div key={index} className="my-4 flex items-center gap-8 md:flex-col md:my-6 md:w-[33%] md-justify-between">
+                                <p className="itemServicesTitle w-[70%] md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
+                                <p className="itemServicesDescription w-[70%] first-letter:uppercase md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.description}</p>
+                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex justify-center items-center md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
                             </div>
                         )
                     })}
@@ -479,18 +497,19 @@ function Services() {
                 <p className="titleServices">{piedi.title}</p>
                 <Decoration props="my-6" />
             </div>
-            <div>
-                <img src={piedi.urlPicture} alt={alt + piedi.pictureAltDescription} />
+            <div className="flex justify-center rounded-xl">
+                <img className="rounded-xl" src={piedi.urlPicture} alt={alt + piedi.pictureAltDescription} />
             </div>
-            <div>
-                {piedi.listServices.map((item,index) => {
-                    return (
-                        <div key={index}>
-                            <p className="itemServicesTitle">{item.description}</p>
-                            <p className="itemServicesPrice clamp-price">{item.price}</p>
+            <div className="flex flex-col md:flex-row flex-wrap gap-[10px] justify-between">
+                    {piedi.listServices.map((item,index) => {
+                        return (
+                            <div key={index} className="my-4 flex items-center gap-8 md:flex-col md:my-6 md:w-[33%] md-justify-between">
+                                <p className="itemServicesTitle w-[70%] md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
+                                <p className="itemServicesDescription w-[70%] first-letter:uppercase md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.description}</p>
+                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex justify-center items-center md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
                         </div>
-                    )
-                })}
+                        )
+                    })}
             </div>
         </div>
 
