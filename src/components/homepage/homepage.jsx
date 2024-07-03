@@ -7,57 +7,18 @@ import Button from "../button/button"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 
-import Slider from "react-slick";
 import Decoration from "../../assets/decoration/decoration"
 
 import Alt from "../alt/alt"
+import SimpleSlider from "../slider/simpleSlider";
 
-
-const imagesToSlide = [
-    "1",
-    "2",
-    "3",
-    "4",
+const trattamenti = [
+    "../../assets/gallery/laminazione_ciglia.jpg",
+    "../../assets/gallery/trattamento_macchie.jpg",
+    "../../assets/gallery/mani.jpg",
+    "../../assets/gallery/piedi.jpg",
 ]
 
-function ImageSlider({url}) {
-    return (
-        <div className="w-[345px] h-[345px] bg-[#FFF5F8] ml-auto mr-auto mt-8 mb-8 rounded-3xl">
-            <h3>{url}</h3>
-        </div>
-    )
-}
-
-function SimpleSlider() {
-
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-
-    responsive: [
-        {
-          breakpoint: 950,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-    ]
-  };
-
-  return (
-    <div className="mb-8 mt-8">
-        <Slider {...settings}>
-            {imagesToSlide.map((item, index) => <ImageSlider key={index} url={item} />)}
-        </Slider>
-    </div>
-  );
-}
 
 const gallery = [
     {
@@ -167,7 +128,7 @@ function HomePage() {
                         <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <div className="container bg-brown-100"> 
-                        <SimpleSlider  />
+                        <SimpleSlider  props={{ slideToShow: "2", slideToScroll: "2"}} />
                         <Button url="/servizi" title="scopri di più" />
                     </div>
             </div>
