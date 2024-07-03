@@ -5,10 +5,13 @@ import ItemGallery from "./itemGallery"
 import Button from "../button/button"
 
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme.css"; 
 
 import Slider from "react-slick";
 import Decoration from "../../assets/decoration/decoration"
+
+import Alt from "../alt/alt"
+
 
 const imagesToSlide = [
     "1",
@@ -56,8 +59,6 @@ function SimpleSlider() {
   );
 }
 
-const alt = "Estetica un'ora per te | ";  
-
 const gallery = [
     {
         url: "../../../assets/homepage/trattamenti/pietre.png",
@@ -98,8 +99,8 @@ function HomePage() {
                         </div>
 
                         <div className="relative w-[50%] max-w-[245px] z-20 md:max-w-[30%] md:basis-[45%]">
-                            <img className="relative" src="../../../assets/homepage/woman.png" alt={`${alt} Immagine Donna`} />
-                            <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${alt}Immagine pianta vicina alla donna`}/>
+                            <img className="relative" src="../../../assets/homepage/woman.png" alt={`${Alt} Immagine Donna`} />
+                            <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${Alt}Immagine pianta vicina alla donna`}/>
                         </div>
 
                     </div>
@@ -108,11 +109,11 @@ function HomePage() {
             </div>
 
 
-            {/* TRATTAMENTI PERSONALIZZATI */} 
+            {/* TRATTAMENTI PERSONALIZZATI */}  
 
             <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20 lg-items-start">
                 <div className="lg:w-[95%] lg:ml-auto">
-                    <p className="subheading mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
+                    <p className="subheading capitalize mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
                     <Decoration props="hidden mx-auto fit-content mb-6 md:block lg:w-[100%]" />
                 </div>
                     <div className="flex flex-col items-center  gap-4 md:flex-row md:flex-wrap md:justify-center md:items-stretch">
@@ -126,8 +127,8 @@ function HomePage() {
             <div className="container md:flex">
                 <div className="container flex flex-col items-center lg:items-start">
                     <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins-normal">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
-                    <div>
-                        <p className="playfair text-brown-100 text-[32px] letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
+                    <div> 
+                        <p className="subheading text-brown-100 letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
                     <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -138,34 +139,34 @@ function HomePage() {
                {/* STAFF */}
                 <div className="container flex items-center justify-between mt-10 mb-10">
                     <div className="w-[40%] self-end">
-                        <img src="../../../assets/homepage/staff/stone.png" alt={`${alt}Immagine di pietre da massaggio in pila`} />
+                        <img src="../../../assets/homepage/staff/stone.png" alt={`${Alt}Immagine di pietre da massaggio in pila`} />
                     </div>
 
                         <div className="relative w-[60%] fit-content">
                             <div className="absolute left-[-10%] bottom-0 -z-1">
-                                <img src="../../../assets/homepage/staff/arco_chiaro.png" alt={`${alt} Immagine di una porta ad arco scura`} />
+                                <img src="../../../assets/homepage/staff/arco_chiaro.png" alt={`${Alt} Immagine di una porta ad arco scura`} />
                             </div>
                             <div className="relative">
-                                 <img src="../../../assets/homepage/staff/arco_scuro.png" alt={`${alt} Immagine di una porta ad arco chiara`} />
-                                 <img className="absolute bottom-0 left" src="../../../assets/homepage/staff/staff.png" alt={`${alt} Immagine del personale lavorativo`} />
-                            </div>
+                                 <img src="../../../assets/homepage/staff/arco_scuro.png" alt={`${Alt} Immagine di una porta ad arco chiara`} />
+                                 <img className="absolute bottom-0 left" src="../../../assets/homepage/staff/staff.png" alt={`${Alt} Immagine del personale lavorativo`} />
+                            </div> 
                         </div>
                 </div>
 
             </div>
-
+ 
             {/* MACCHINARI AD ALTA TECNOLOGIA */}
 
 
             <div className="bg-brown-100 text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
                         <div>
-                            <p className="playfair pt-8 pb-8 text-[32px]">macchinari ad alta tecnologia</p>
+                            <p className="subheading capitalize pt-8 pb-8">macchinari ad alta tecnologia</p>
                             <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                         </div>
                         <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <div className="container bg-brown-100">
+                    <div className="container bg-brown-100"> 
                         <SimpleSlider  />
                         <Button url="/servizi" title="scopri di più" />
                     </div>
@@ -176,7 +177,7 @@ function HomePage() {
             <div className="container mb-6 mt-6 relative">
                 <div className="flex flex-col items-center">
                     <div>
-                        <p className="playfair text-brown-100 text-[32px] tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
+                        <p className="subheading capitalize text-brown-100 tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                     </div>
                     <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -184,7 +185,7 @@ function HomePage() {
                     <Button url="/chi-siamo" title="scopri di più" />
                     <div>
                         <img src="../../assets/homepage/igiene_e_sicurezza/plant.png"
-                         alt={alt + "Immagine di una pianta"}
+                         alt={Alt + "Immagine di una pianta"}
                         className="absolute right-0 bottom-0 hidden md:block md:max-w-[160px]"/>
                     </div>
                 </div>

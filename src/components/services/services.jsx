@@ -3,7 +3,8 @@ import Footer from "../footer/footer"
 import Sidenavbar from "../navbar/sidenavbar"
 import Decoration from "../../assets/decoration/decoration";
 
-const alt = "Estetica un'ora per te | "; 
+import Alt from "../alt/alt"
+ 
 
 const servizi = {
 
@@ -68,11 +69,13 @@ const servizi = {
              description: "massaggio manuale stimolante, drenante decontratturante",
              duration: [
                 {
-                    description: "30 minuti parziale gambe o schiena",
+                    time: "30 minuti ",
+                    description: "parziale gambe o schiena",
                     price: "€20"
                 },
                 {
-                    description: "60 minuti totale corpo",
+                    time: "60 minuti ",
+                    description: "totale corpo",
                     price: "€40"
                 }
              ] 
@@ -303,8 +306,8 @@ function Services() {
         </div>
         <div className="flex justify-center">
             <div className="rounded-xl relative w-[90%] md:w-[80%]">
-                <img className="hidden md:block max-w-[100px] rotate-[90deg] absolute left-[-90px] top-0" src="../../assets/servizi/leaf.png" alt={alt + "Immagine di una foglia"} />
-                <img className="rounded-xl" src={viso.urlPicture} alt={alt + viso.pictureAltDescription} />
+                <img className="hidden md:block max-w-[100px] rotate-[90deg] absolute left-[-90px] top-0" src="../../assets/servizi/leaf.png" alt={Alt + "Immagine di una foglia"} />
+                <img className="rounded-xl" src={viso.urlPicture} alt={Alt + viso.pictureAltDescription} />
             </div>
         </div>
         <div className="container">
@@ -347,7 +350,8 @@ function Services() {
         </div>
 
 
-        <div className="bg-pink-150">
+        <div className="bg-pink-150 relative">
+                <img className="hidden md:block absolute bottom-0 right-0 max-w-[200px]" src="../../assets/servizi/icone_background/body_on_towel.png" alt={Alt + "Icon di una donna su un asciugamano"} />
                 <div className="container">
                     <div>
                         <h1 className="titleServices">{corpo.title}</h1>
@@ -355,7 +359,7 @@ function Services() {
                         <p className="subTitleServices">{corpo.subTitle}</p>
                     </div>
                     <div className="flex justify-center rounded-xl">
-                        <img className="rounded-xl" src={corpo.urlPicture} alt={alt + corpo.pictureAltDescription} />
+                        <img className="rounded-xl" src={corpo.urlPicture} alt={Alt + corpo.pictureAltDescription} />
                     </div>
                     <div className="md:flex md:flex-wrap">
                         {
@@ -372,7 +376,7 @@ function Services() {
                                                     {item.duration.map((durationItem,durationIndex) => {
                                                     return (
                                                         <Fragment key={durationIndex}>
-                                                            <p className="itemServicesDescription">{durationItem.description}</p>
+                                                            <p className="itemServicesDescription"><span className="itemServiceDuration clamp-price">{durationItem.time}</span>{durationItem.description}</p>
                                                             <p className="itemServicesPrice clamp-price">{durationItem.price}</p>
                                                         </Fragment>
                                                     )
@@ -398,12 +402,13 @@ function Services() {
                 </div>
         </div>
 
-         <div className="flex justify-center rounded-xl">
-            <img className="w-[80%] md-[90%] rounded-xl" src={epilazione.urlPicture} alt={alt} />
+         <div className="flex justify-center rounded-xl relative z-20">
+            <img className="hidden md:block max-w-[200px] absolute top-[50%] translate-y-[-50%] left-[-10px] -z-1" src="../../assets/servizi/icone_background/flowers.png" alt={Alt + "Icona di rose messe insieme"} />
+            <img className="w-[80%] md-[90%] rounded-xl" src={epilazione.urlPicture} alt={Alt} />
         </div>
 
 
-    <div className="container flex justify-center">
+        <div className="container flex justify-center">
 
         <div className="md:flex md:w-[90%]">
 
@@ -423,7 +428,7 @@ function Services() {
         </div>
         </div>
 
-        <div className="md:w-[50%] md:flex md:flex-col md:items-end">
+        <div className="md:w-[50%] md:flex md:flex-col md:items-end"> 
 
             <p className="titleServices md:text-right">uomo</p>
             <Decoration props="scale-100 my-6 md:fit-content md:scaleX-1" color="#80ccff" />
@@ -441,34 +446,39 @@ function Services() {
         </div>
 
         </div>
-    </div>
+        </div>
 
-        <div className="container">
-            <div>
-                <p className="titleServices">{laser.title}</p>
-                <p className="subTitleServices">{laser.subTitle}</p>
-                <p className="subTitleServices">{laser.offer}</p>
+        <div className="bg-pink-100">
+
+            <div className="container">
+                <div>
+                    <p className="titleServices">{laser.title}</p>
+                    <p className="subTitleServices">{laser.subTitle}</p>
+                    <p className="subTitleServices">{laser.offer}</p>
+                </div>
             </div>
-        </div>
 
-        <div className="flex justify-center rounded-xl">
-          <img className="w-[80%] md:w-[90%] rounded-xl" src={laser.urlPicture} alt={alt + laser.pictureAltDescription} />
-        </div>
-
-        <div className="container">
-        <div className="flex flex-col md:flex-row flex-wrap">
-                {laser.listServices.map((item,index) => {
-                    return (
-                        <div key={index} className="my-4 flex gap-8 md:items-center md:justify-center md:my-6 md:w-[33%]">
-                            <p className="itemServicesTitle w-[70%] md:w-[70%] flex items-center">{item.description}</p>
-                            <p className="itemServicesPrice clamp-price w-[20%] md:w-[30%] flex justify-center items-center itemServicesPrice clamp-price md:block">{item.price}</p>
-                        </div>
-                    )
-                })}
+            <div className="flex justify-center rounded-xl">
+                <img className="w-[80%] md:w-[90%] rounded-xl" src={laser.urlPicture} alt={Alt + laser.pictureAltDescription} />
             </div>
+
+            <div className="container">
+                <div className="flex flex-col md:flex-row flex-wrap">
+                    {laser.listServices.map((item,index) => {
+                        return (
+                            <div key={index} className="my-4 flex gap-8 md:items-center md:justify-center md:my-6 md:w-[33%]">
+                                <p className="itemServicesTitle w-[70%] md:w-[70%] flex items-center">{item.description}</p>
+                                <p className="itemServicesPrice clamp-price w-[20%] md:w-[30%] flex justify-center items-center itemServicesPrice clamp-price md:block">{item.price}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+
         </div>
 
-        <div className="bg-pink-150">
+        <div className="bg-pink-150 relative">
+            <img className="hidden md:block absolute hidden max-w-[100px] md:block bottom-0 right-0" src="../../assets/servizi/icone_background/flower_plant.png" alt={Alt + "Icona di una pianta grassa"} />
             <div className="container">
                 <div>
                     <p className="titleServices">{mani.title}</p>
@@ -481,10 +491,10 @@ function Services() {
                 <div className="flex flex-col md:flex-row flex-wrap gap-[10px] justify-between">
                     {mani.listServices.map((item,index) => {
                         return (
-                            <div key={index} className="my-4 flex items-center gap-8 md:flex-col md:my-6 md:w-[33%] md-justify-between">
-                                <p className="itemServicesTitle w-[70%] md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
+                            <div key={index} className="flex flex-col md:my-6 md:w-[33%] md-justify-between">
+                                <p className="itemServicesTitle md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
                                 <p className="itemServicesDescription w-[70%] first-letter:uppercase md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.description}</p>
-                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex justify-center items-center md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
+                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
                             </div>
                         )
                     })}
@@ -492,26 +502,33 @@ function Services() {
             </div>
         </div>
 
+        <div className="relative">
+            <img className="hidden md:block absolute hidden max-w-[100px] md:block bottom-0 right-0" src="../../assets/servizi/icone_background/plant_and_towel.png" alt={Alt + "Icona di una pianta grassa"} />
+        
         <div className="container">
+
             <div>
                 <p className="titleServices">{piedi.title}</p>
                 <Decoration props="my-6" />
             </div>
             <div className="flex justify-center rounded-xl">
-                <img className="rounded-xl" src={piedi.urlPicture} alt={alt + piedi.pictureAltDescription} />
+                <img className="rounded-xl" src={piedi.urlPicture} alt={Alt + piedi.pictureAltDescription} />
             </div>
             <div className="flex flex-col md:flex-row flex-wrap gap-[10px] justify-between">
                     {piedi.listServices.map((item,index) => {
                         return (
-                            <div key={index} className="my-4 flex items-center gap-8 md:flex-col md:my-6 md:w-[33%] md-justify-between">
-                                <p className="itemServicesTitle w-[70%] md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
+                            <div key={index} className="flex flex-col md:my-6 md:w-[33%] md-justify-between">
+                                <p className="itemServicesTitle md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.title}</p>
                                 <p className="itemServicesDescription w-[70%] first-letter:uppercase md:w-full flex items-center md:flex-col md:grow md:items-start md:justify-center">{item.description}</p>
-                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex justify-center items-center md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
+                                <p className="itemServicesPrice clamp-price w-[20%] md:w-full flex md:flex-col md:grow md:items-start md:justify-center">{item.price}</p>
                         </div>
                         )
                     })}
             </div>
         </div>
+
+        </div>
+
 
             <Footer />
        </>

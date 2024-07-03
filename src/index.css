@@ -21,7 +21,7 @@
   font-weight: 400;
   line-height: 110%; /* 15.4px */
   letter-spacing: -0.28px;
-  text-transform: capitalize;
+  /* text-transform: capitalize;  */
 }
 
 .heading-playfair {
@@ -104,13 +104,31 @@
     .itemServicesTitle {
       @apply clamp-poppins-md text-brown-100 font-bold
     }
-
+ 
     .itemServicesDescription {
       @apply clamp-poppins-normal font-normal
     }
 
     .itemServicesPrice {
       @apply clamp-price text-pink-300 font-bold
+    }
+
+    .itemServiceDuration {
+      @apply clamp-price text-brown-100 font-bold
+
+    }
+
+    /* About */
+
+    .border-image {
+      box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.1),
+      0 8px 16px rgba(0, 0, 0, 0.1),
+      0 16px 32px rgba(255, 77, 130, 0.4);
+    }
+
+    .border-bottom-pink {
+      border-left: 4px solid theme("colors.pink.300")
     }
     
 
