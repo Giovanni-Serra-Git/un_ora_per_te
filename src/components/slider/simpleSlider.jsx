@@ -19,9 +19,6 @@ function SimpleSlider({props, images}) {
 
     let {slideToScroll, slideToShow} = props;
 
-    console.log(slideToScroll)
-    console.log(slideToShow)
-
 
     let settings = {
       dots: true,

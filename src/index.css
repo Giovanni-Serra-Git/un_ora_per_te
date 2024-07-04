@@ -47,6 +47,15 @@
       @apply playfair clamp-poppins-md my-6
     }
 
+    /* Contatti */
+
+    .border-black { border: 1px solid gray }
+
+    /* Toastify */
+
+    .progress-bar-pink {
+      background-color: blue
+    }
 
 
 @tailwind utilities;
@@ -118,7 +127,7 @@
     /* .subTitleServices {
       @apply playfair clamp-poppins-md my-6
     } */
-     
+
     .itemServicesTitle {
       @apply clamp-poppins-md text-brown-100 font-bold
     }
@@ -153,6 +162,16 @@
 
     .border-bottom {
       border-bottom: 2px solid #ff99b4;
+    }
+
+    /* Gallery */ 
+
+    .gradient-pink {
+      background: rgb(255,26,87);
+      background: -moz-linear-gradient(90deg, rgba(255,26,87,1) 0%, rgba(255,77,124,1) 0%, rgba(255,128,162,1) 100%);
+      background: -webkit-linear-gradient(90deg, rgba(255,26,87,1) 0%, rgba(255,77,124,1) 0%, rgba(255,128,162,1) 100%);
+      background: linear-gradient(90deg, rgba(255,26,87,1) 0%, rgba(255,77,124,1) 0%, rgba(255,128,162,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff1a57",endColorstr="#ff80a2",GradientType=1);
     }
     
 
