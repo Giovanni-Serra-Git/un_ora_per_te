@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "./logo"
 import { forwardRef, useRef } from "react";
 import Navbar from "../navbar/navbar"
+import ScrollTop from "../../scrollTop";
 
 
 function ButtonOpenSidePanel({onClick}) {
@@ -80,6 +81,7 @@ function Sidenavbar() {
     return (
 
       <>
+        <ScrollTop />
        <ForwardSidePanel ref={ref} onClick={() => { ref.current.style.width = "0" }}/>
 
       <nav className="flex justify-between items-center py-6 w-[100%]">

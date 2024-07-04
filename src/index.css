@@ -39,6 +39,14 @@
   font-weight: 700;
 }
 
+    /* Services */
+
+    .titleServices { @apply subheading my-4 py-4 }
+
+    .subTitleServices {
+      @apply playfair clamp-poppins-md my-6
+    }
+
 
 
 @tailwind utilities;
@@ -80,11 +88,17 @@
     }
 
     .clamp-poppins-normal {
-      font-size: clamp(12px, 2vw, 16px);
+      font-size: clamp(13px, 2vw, 16px);
+    }
+
+    .clamp-poppins-epilazione {
+      font-size: clamp(16px, 2.5vw, 18px);
+      color: theme("colors.brown.100");
+      font-weight: bold;
     }
 
     .clamp-poppins-md {
-      font-size: clamp(20px, 2.5vw, 24px);
+      font-size: clamp(18px, 2.5vw, 24px);
     }
 
     .clamp-poppins-lg {
@@ -97,14 +111,14 @@
 
     /* Services */
 
-    .titleServices {
+    /* .titleServices {
       @apply subheading my-4 py-4
-    }
+    } */
 
-    .subTitleServices {
+    /* .subTitleServices {
       @apply playfair clamp-poppins-md my-6
-    }
-
+    } */
+     
     .itemServicesTitle {
       @apply clamp-poppins-md text-brown-100 font-bold
     }
@@ -120,6 +134,12 @@
     .itemServiceDuration {
       @apply clamp-price text-brown-100 font-bold
 
+    }
+
+    .box-shadow-pink {
+      -webkit-box-shadow: -7px 7px 12px 0px rgba(255,204,218,0.99);
+      -moz-box-shadow: -7px 7px 12px 0px rgba(255,204,218,0.99);
+      box-shadow: -7px 7px 12px 0px rgba(255,204,218,0.99);
     }
 
     /* About */

@@ -13,10 +13,10 @@ import Alt from "../alt/alt"
 import SimpleSlider from "../slider/simpleSlider";
 
 const trattamenti = [
-    "../../assets/gallery/laminazione_ciglia.jpg",
-    "../../assets/gallery/trattamento_macchie.jpg",
     "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/piedi.jpg",
+    "../../assets/gallery/mani.jpg",
+    "../../assets/gallery/mani.jpg",
+    "../../assets/gallery/mani.jpg",
 ]
 
 
@@ -61,7 +61,7 @@ function HomePage() {
 
                         <div className="relative w-[50%] max-w-[245px] z-20 md:max-w-[30%] md:basis-[45%]">
                             <img className="relative" src="../../../assets/homepage/woman.png" alt={`${Alt} Immagine Donna`} />
-                            <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${Alt}Immagine pianta vicina alla donna`}/>
+                            {/* <img className=" w-[60%]  absolute left-[70%] top-[10%] -z-1"  src="../../../assets/homepage/plant.png"alt={`${Alt}Immagine pianta vicina alla donna`}/> */}
                         </div>
 
                     </div>
@@ -81,19 +81,18 @@ function HomePage() {
                         { 
                             gallery.map((item, index) => <ItemGallery key={index} src={item.url} title={item.title} />)
                          }
-                    </div> 
+                    </div>  
                     <Button title="scopri i nostri trattamenti" url="/servizi" />
                 </div>
 
             <div className="container md:flex">
                 <div className="container flex flex-col items-center lg:items-start">
-                    <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins-normal">più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
+                    <p className="poppins text-brown-100 letter-spacing-[-0.28px] mb-6 mt-6 clamp-poppins-normal">Più di <span className="text-pink-300 font-bold">10 anni</span> di esperienza</p>
                     <div> 
                         <p className="subheading text-brown-100 letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Nel nostro centro estetico, il personale altamente qualificato è rappresentato da una professionista dedicata e competente. Con anni di esperienza e formazione specializzata, offre una gamma completa di trattamenti di bellezza e benessere personalizzati. Sempre aggiornata sulle ultime tecniche e tendenze, assicura risultati eccellenti e un'esperienza di cura unica per ogni cliente. La sua missione è far sentire ogni persona accolta e valorizzata, riflettendo una profonda passione per il benessere e la bellezza.</p>
                     <Button url="/chi-siamo" title="conosci lo staff" />
                 </div>
 
@@ -128,7 +127,7 @@ function HomePage() {
                         <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <div className="container bg-brown-100"> 
-                        <SimpleSlider  props={{ slideToShow: "2", slideToScroll: "2"}} />
+                        <SimpleSlider  images={trattamenti} props={{ slideToShow: "2", slideToScroll: "2"}} />
                         <Button url="/servizi" title="scopri di più" />
                     </div>
             </div>
@@ -141,8 +140,7 @@ function HomePage() {
                         <p className="subheading capitalize text-brown-100 tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Il nostro centro estetico si impegna a mantenere i più alti standard di sicurezza e igiene. Ogni trattamento viene eseguito utilizzando strumenti sterilizzati e prodotti di alta qualità per garantire la massima protezione. Le superfici sono regolarmente disinfettate e l'ambiente è mantenuto pulito e sicuro. La salute e il benessere dei nostri clienti sono la nostra priorità assoluta.</p>
                     <Button url="/chi-siamo" title="scopri di più" />
                     <div>
                         <img src="../../assets/homepage/igiene_e_sicurezza/plant.png"

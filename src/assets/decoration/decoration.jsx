@@ -4,7 +4,7 @@
 
 function Decoration({props,color}) {
     return (
-        <div className={props}>
+        <div className={`hidden md:block ${props}`}>
             {color ?     
     <svg width="136" height="24" viewBox="0 0 136 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path opacity="0.5" d="M18.0857 1.66009C18.0857 5.51942 12.7164 12.9169 12.7164 12.9169C12.7164 12.9169 7.34717 5.5166 7.34717 1.66009C7.34717 -2.19643 12.7164 1.87982 12.7164 1.87982C12.7164 1.87982 18.0857 -2.19924 18.0857 1.66009Z" fill="#80ccff"/>

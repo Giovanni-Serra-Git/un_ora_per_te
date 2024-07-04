@@ -26,7 +26,7 @@ function Gallery() {
             <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px] capitalize py-6">Galleria</h1>
         </div>
 
-        <div className="bg-[#ff80a2] text-white text-center pt-6 pb-6">
+        <div className="bg-[#ffccda] text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
                         <div>
                             <p className="subheading capitalize pt-8 pb-8">galleria foto</p>

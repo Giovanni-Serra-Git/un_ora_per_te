@@ -13,7 +13,6 @@ import Error from './components/error/error.jsx';
 import About from './components/about/about.jsx';
 import Gallery from './components/gallery/gallery.jsx';
 import Contacts from './components/contacts/contacts.jsx';
-import ScrollTop from './scrollTop.jsx';
 
 
 
@@ -43,8 +42,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router}>
-        <ScrollTop />
-      </RouterProvider>
+      <RouterProvider router={router}/>
   </React.StrictMode>,
 )

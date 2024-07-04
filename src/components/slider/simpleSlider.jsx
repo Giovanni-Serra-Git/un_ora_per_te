@@ -13,15 +13,9 @@ function ImageSlider({url}) {
 
 function SimpleSlider({props, images}) {
 
-  let imagesToSlide;
-
-  if (images) {
-    imagesToSlide = [
-      ...images
-    ]
-  } else {
-    imagesToSlide = [1,2,3,4]
-  }
+  let imagesToSlide = [
+    ...images
+  ]
 
     let {slideToScroll, slideToShow} = props;
 
@@ -35,7 +29,7 @@ function SimpleSlider({props, images}) {
       speed: 500,
       slidesToShow: +slideToShow,
       slidesToScroll: +slideToScroll,
-  
+
       responsive: [
           {
             breakpoint: 950,
@@ -48,7 +42,7 @@ function SimpleSlider({props, images}) {
           },
       ]
     };
-  
+
     return (
       <div className="mb-8 mt-8">
           <Slider {...settings}>
