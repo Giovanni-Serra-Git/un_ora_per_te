@@ -71,7 +71,7 @@ function Sidenavbar() {
             <NavLink to="/chi-sono">Chi Sono</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
-            <NavLink to="/galleria">Galleria</NavLink>
+            <NavLink to="#">Galleria</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
             <NavLink to="/contatti">Contatti</NavLink>

@@ -142,7 +142,7 @@ function Contacts() {
 
         {/* Contatto Email  */}
 
-        <div className="container py-4 my-y-[1rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
+        <div className="container py-4 my-[2rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
             <div className="md:w-[60%]">
                 <div className="my-[2rem] md:my-[4rem] flex flex-col gap-4 ">
                     <h1 className="subheading text-brown-100 text-center md:text-left">prenota un appuntamento per rilassarti</h1>
