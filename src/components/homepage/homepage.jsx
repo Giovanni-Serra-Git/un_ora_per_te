@@ -77,7 +77,7 @@ function HomePage() {
                     <p className="subheading capitalize mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
                     <Decoration props="hidden mx-auto fit-content mb-6 md:block lg:w-[100%]" />
                 </div>
-                    <div className="flex flex-col items-center  gap-4 md:flex-row md:flex-wrap md:justify-center md:items-stretch">
+                    <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:items-stretch">
                         { 
                             gallery.map((item, index) => <ItemGallery key={index} src={item.url} title={item.title} />)
                          }

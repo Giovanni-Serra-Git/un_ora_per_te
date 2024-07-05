@@ -93,11 +93,11 @@ function ContactsInfo() {
     return (
           
         <form className="flex flex-col gap-[20px] items-center md:items-start" ref={form} onSubmit={(e) => sendEmail(e)}> 
-          <div className="flex gap-[10px]">
+          <div className="flex flex-col w-[90%] md:flex md:w-[80%] gap-[10px]">
             <input placeholder="nome" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="text" name="user_name" required value={name} onChange={(e) => setName(e.target.value)}/>
             <input placeholder="cognome" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="text" name="user_last_name" required value={lastName} onChange={(e) => setLastName(e.target.value)}/>
           </div>
-          <div className="flex gap-[10px]">
+          <div className="flex flex-col w-[90%] md:flex md:w-[80%] gap-[10px]">
             <input placeholder="email" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
             <input placeholder="conferma email" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)}/>
           </div>
@@ -106,7 +106,7 @@ function ContactsInfo() {
           </div>
           <input  type="submit" value="Invia" className="inline-block bg-pink-300 text-white capitalize rounded-full min-w-[180px] fit-content mx-auto py-2.5 px-3 my-8 cursor-pointer
                 hover:bg-pink-400 transition duration-200 linear text-center"  />
-      </form>
+        </form>
   
     )
   }
@@ -154,7 +154,7 @@ function Contacts() {
                     <ToastContainer autoClose="1500" />
                 </div>
             </div>
-            <div className="my-[2rem] w-[300px] h-[300px] bg-[#f1f1f1] mx-auto"></div>
+            <div className="my-[2rem] w-[60vw] h-[40vh] bg-[#f1f1f1] mx-auto">foto qui</div>
         </div>
 
 
