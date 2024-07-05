@@ -8,7 +8,7 @@ function Navbar() {
           <NavLink className="uppercase clamp-poppins-normal font-bold text-brown-100 hover:text-[black] transition-all transition-linear duration-200" to="/servizi">Servizi</NavLink>
         </li>
         <li>
-          <NavLink className="uppercase clamp-poppins-normal font-bold text-brown-100 hover:text-[black] transition-all transition-linear duration-200" to="/chi-siamo">Chi Sono</NavLink>
+          <NavLink className="uppercase clamp-poppins-normal font-bold text-brown-100 hover:text-[black] transition-all transition-linear duration-200" to="/chi-sono">Chi Sono</NavLink>
         </li>
         <li>
           <NavLink className="uppercase clamp-poppins-normal font-bold text-brown-100 hover:text-[black] transition-all transition-linear duration-200" to="/galleria">Galleria</NavLink>

@@ -4,6 +4,7 @@ import Alt from "../alt/alt"
 import Button from "../button/button"
 import Sidenavbar from "../navbar/sidenavbar"
 import Footer from "../footer/footer"
+import ContainerNavbar from "../containerNavbar/containerNavbar"
 
 
 
@@ -87,27 +88,23 @@ const valori = [
 function About() {
     return (
         <>
-            <div className="bg-pink-100">
-                <div className="container">
-                    <Sidenavbar />
-                    <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px] capitalize py-6">chi sono</h1>
-                </div>
-            </div>
+            <ContainerNavbar title="chi sono" />
 
-            <div>
+        <div>
 
         <div className="container md:my-8 flex flex-col gap-4 md:flex-row md:justify-between md:gap-4">
             <div className="flex flex-col md:flex md:flex-col md:gap-4 md:items-center md:w-[50%] bg-[#ffccdb] text-brown-100 rounded-lg px-4">
-                <h4 className="subheading text-brown-100 my-4">la mia esperienza</h4>
+                <h4 className="subheading text-brown-100 my-4">esperienza professionale</h4>
                 <div className="flex flex-col gap-4">
-                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Diplomata al liceo scientifico nel 2007, ho deciso di intraprendere la carriera di estetista. Ho frequentato il triennio presso l'Accademia di Immagine a Sanremo, conseguendo il diploma di estetista qualificata. Questo mi ha aperto le porte nel mondo della bellezza e della cura per le persone.</p>
-                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Per i successivi dieci anni ho lavorato come estetista presso un centro estetico, permettendomi di formarmi e specializzarmi in varie tecniche di cura e attenzione al corpo dei miei clienti.</p>
+                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Diplomata al liceo scientifico nel 2007, ha deciso di intraprendere la carriera di estetista.<br></br> Frequenta il triennio presso l'Accademia di Immagine a Sanremo, conseguendo il diploma di estetista qualificata. Questo le ha aperto le porte nel mondo della bellezza e della cura per le persone.</p>
+                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Per i successivi dieci anni lavora come estetista presso un centro estetico, permettendole di formarsi e specializzarsi in varie tecniche di cura e attenzione al corpo dei suoi clienti.</p>
                 </div>
                 <div>
-                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Fondamentale per me è la continua formazione e crescita personale, mirata a migliorare non solo le mie capacità ma anche ad ampliare la mia conoscenza personale, per rispondere meglio alle esigenze dei clienti.</p>
-                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Presso il mio centro estetico non offro solo una vasta esperienza, ma anche un ambiente pensato per farti sentire a tuo agio, in cui il relax e la cura personale sono le parole chiave del mio lavoro, svolto con passione.</p>
-                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Vieni a trovarmi!</p>
+                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Fondamentale per lei è la continua formazione e crescita personale, mirata a migliorare non solo le sue capacità ma anche ad ampliare la sua conoscenza personale, per rispondere meglio alle esigenze dei clienti.</p>
+                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Presso il suo centro estetico non offre solo una vasta esperienza, ma anche un ambiente pensato per far sentire a proprio agio i clienti, in cui il relax e la cura personale sono le parole chiave del suo lavoro, svolto con passione.</p>
+                    <p className="poppins leading-[140%] font-700 clamp-poppins-normal">Vieni a trovarla!</p>
                 </div>
+
                 <Button url="/contatti" title="contatti" />
             </div>
             <div className="md:w-[50%] flex flex-col items-center justify-center">
@@ -129,10 +126,10 @@ function About() {
             <img className="hidden absolute bottom-[10px] right-[40px] max-w-[100px] md:block " src="../../assets/servizi/icone_background/flower_plant.png" alt={Alt + "Immagine di una pietra sopra l'altra"} />
         <div className="flex flex-col gap-2 bg-pink-100 rounded-[25px]  md:px-6 md:py-6 md:rounded-[50px] border-bottom">
            <div className="py-4 flex flex-col items-center gap-4 md:my-6">
-            <div className="subheading text-brown-100 md:my-4">le mie certificazioni</div>
+            <div className="subheading text-brown-100 md:my-4">certificazioni</div>
             <Decoration />
            </div>
-                        <p className="mx-auto w-[90%] mb-4 poppins leading-[140%] font-700 clamp-poppins-normal text-brown-100 md:ml-0 md:w-full">Spinta dal pronfondo desiderio di perfezionamento e apprendimento di diverse metodologie dell'estetica e la cura del corpo umano, ho conseguito altri qualifiche in forma di attestati indipendenti, dei quali: </p>
+                        <p className="mx-auto w-[90%] mb-4 poppins leading-[140%] font-700 clamp-poppins-normal text-brown-100 md:ml-0 md:w-full">Spinta dal pronfondo desiderio di perfezionamento e apprendimento di diverse metodologie dell'estetica e la cura del corpo umano, ha conseguito diverse qualifiche in forma di attestati indipendenti, dei quali: </p>
                         <div className="flex flex-col justify-center gap-2 py-6">
                             {certificati.map((item,index) => {
                                 return (
@@ -177,9 +174,9 @@ function About() {
 
             <div className="flex flex-col gap-2 bg-pink-100">
                 <div className="py-4 flex flex-col items-center gap-4 md:my-6">
-                    <div className="subheading text-brown-100 md:my-4">i miei valori</div>
+                    <div className="subheading text-brown-100 md:my-4">i valori</div>
                     <Decoration /> 
-                    <p className="w-[80%] playfair text-brown-100 playfair-clamp-md md:w-[80%] leading-8">Avere dei valori fondamentali nel nostro centro estetico significa offrirti sempre il massimo della qualità e dell'attenzione. Ci impegniamo a creare un'esperienza unica e personalizzata, dove tu possa sentirti rilassato e coccolato. La tua sicurezza e soddisfazione sono al centro di tutto ciò che facciamo, perché vogliamo che ogni visita sia un momento speciale per te</p>
+                    <p className="w-[80%] playfair text-brown-100 playfair-clamp-md md:w-[80%] leading-8"><span className="font-extrabold">Estetica un'ora per te</span>, nasce su dei valori fondamentali; questo significa offrirti sempre il massimo della qualità e dell'attenzione.<br></br> Dediti all'impegno si va a creare un'esperienza unica e personalizzata, dove la persona si possa sempre e comunque sentire rilassata e coccolata.<br></br>La tua sicurezza e soddisfazione sono al centro di tutto ciò che viene offerto, perché si vuole che ogni visita sia un momento speciale per te</p>
                 </div>
 
                 <div className="hidden md:flex md:justify-between">

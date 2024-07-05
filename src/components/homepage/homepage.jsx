@@ -47,7 +47,7 @@ function HomePage() {
 
             {/* HERO SECTION */}
             
-            <div className="bg-pink-100 relative z-20">
+            <div className="bg-pink-100 relative">
                 <div className="container text-center flex flex-col items-center">
                     <Sidenavbar/>
                     <div className="flex flex-col items-center md:flex-row md:justify-between">
@@ -92,7 +92,7 @@ function HomePage() {
                         <p className="subheading text-brown-100 letter-spacing-[-0.64px] mb-6 mt-6">personale qualificato</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Nel nostro centro estetico, il personale altamente qualificato è rappresentato da una professionista dedicata e competente. Con anni di esperienza e formazione specializzata, offre una gamma completa di trattamenti di bellezza e benessere personalizzati. Sempre aggiornata sulle ultime tecniche e tendenze, assicura risultati eccellenti e un'esperienza di cura unica per ogni cliente. La sua missione è far sentire ogni persona accolta e valorizzata, riflettendo una profonda passione per il benessere e la bellezza.</p>
+                    <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Nel nostro centro estetico, il personale altamente qualificato è rappresentato da una professionista dedicata e competente.<br></br>Con anni di esperienza e formazione specializzata, offre una gamma completa di trattamenti di bellezza e benessere personalizzati.<br></br>Sempre aggiornata sulle ultime tecniche e tendenze, assicura risultati eccellenti e un'esperienza di cura unica per ogni cliente.<br></br>La sua missione è far sentire ogni persona accolta e valorizzata, riflettendo una profonda passione per il benessere e la bellezza.</p>
                     <Button url="/chi-siamo" title="conosci lo staff" />
                 </div>
 
@@ -119,17 +119,26 @@ function HomePage() {
 
 
             <div className="bg-brown-100 text-white text-center pt-6 pb-6">
-                    <div className="container flex flex-col items-center">
+                <div className="container">
+                <div className="container flex flex-col items-center">
                         <div>
                             <p className="subheading capitalize pt-8 pb-8">macchinari ad alta tecnologia</p>
                             <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                         </div>
-                        <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p className="text-left poppins text-white leading-[150%] font-normal clamp-poppins-normal md:text-center">Nel nostro centro estetico, utilizziamo macchinari di ultima generazione per garantire risultati eccellenti.<br></br></p>
+                        <p className="text-left md:text-center md:leading-[150%]">
+                            <span className="font-bold">Il lipolaser</span> riduce il grasso localizzato in modo non invasivo, rimodellando il corpo.<br></br>
+                            <span className="font-bold">La pressoterapia</span> stimola il drenaggio linfatico, migliorando la circolazione e alleviando la ritenzione idrica.<br></br>
+                            <span className="font-bold">Il laser a diodo</span> offre un'epilazione permanente sicura ed efficace per tutti i tipi di pelle.<br></br>
+                            <span className="font-bold">Il Starvac combina</span> aspirazione e massaggio per migliorare la tonicità della pelle e ridurre la cellulite.<br></br>
+                            Queste tecnologie avanzate ci permettono di soddisfare le esigenze estetiche dei nostri clienti in modo sicuro ed efficace.</p>
+
                     </div>
                     <div className="container bg-brown-100"> 
-                        <SimpleSlider  images={trattamenti} props={{ slideToShow: "2", slideToScroll: "2"}} />
+                        {/* <SimpleSlider  images={trattamenti} props={{ slideToShow: "2", slideToScroll: "2"}} /> */}
                         <Button url="/servizi" title="scopri di più" />
                     </div>
+                </div>
             </div>
 
             {/* SICUREZZA E IGIENE */}
@@ -140,7 +149,7 @@ function HomePage() {
                         <p className="subheading capitalize text-brown-100 tracking-[-0.64px] mb-6 mt-6">sicurezza e igiene</p>
                         <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                     </div>
-                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Il nostro centro estetico si impegna a mantenere i più alti standard di sicurezza e igiene. Ogni trattamento viene eseguito utilizzando strumenti sterilizzati e prodotti di alta qualità per garantire la massima protezione. Le superfici sono regolarmente disinfettate e l'ambiente è mantenuto pulito e sicuro. La salute e il benessere dei nostri clienti sono la nostra priorità assoluta.</p>
+                    <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Il nostro centro estetico si impegna a mantenere i più alti standard di sicurezza e igiene.<br></br>Ogni trattamento viene eseguito utilizzando strumenti sterilizzati e prodotti di alta qualità per garantire la massima protezione.<br></br>Le superfici sono regolarmente disinfettate e l'ambiente è mantenuto pulito e sicuro.<br></br>La salute e il benessere dei nostri clienti sono la nostra priorità assoluta.</p>
                     <Button url="/chi-siamo" title="scopri di più" />
                     <div>
                         <img src="../../assets/homepage/igiene_e_sicurezza/plant.png"

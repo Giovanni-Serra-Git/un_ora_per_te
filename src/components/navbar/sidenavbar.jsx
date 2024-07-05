@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
-import Logo from "./logo"
 import { forwardRef, useRef } from "react";
 import Navbar from "../navbar/navbar"
 import ScrollTop from "../../scrollTop";
+import LogoWideScreen from "./logoWideScreen";
+import LogoSmallScreen from "./logoSmallScreen";
+
+let screenSize = window.innerWidth;
 
 
 function ButtonOpenSidePanel({onClick}) {
@@ -46,7 +49,7 @@ function Sidenavbar() {
       <div 
        onClick={onClick}
         ref={ref} {...props}
-        className={`fixed top-0 right-0 w-0 h-[100vh] bg-pink-100 z-50
+        className={`overflow-hidden fixed top-0 right-0 w-[0] h-[100vh] bg-pink-100 z-50
           transition-all linear duration-700
           `}
         >
@@ -62,16 +65,16 @@ function Sidenavbar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
-            <NavLink to="/services">Servizi</NavLink>
+            <NavLink to="/servizi">Servizi</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
-            <NavLink to="/about">Chi Sono</NavLink>
+            <NavLink to="/chi-sono">Chi Sono</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
-            <NavLink to="/gallery">Galleria</NavLink>
+            <NavLink to="/galleria">Galleria</NavLink>
           </li>
           <li className="hover:text-pink-400 hover:scale-105 focus:scale-105 transition-all duration-200">
-            <NavLink to="/contacts">Contatti</NavLink>
+            <NavLink to="/contatti">Contatti</NavLink>
           </li>
         </ul>
       </div>
@@ -85,11 +88,15 @@ function Sidenavbar() {
        <ForwardSidePanel ref={ref} onClick={() => { ref.current.style.width = "0" }}/>
 
       <nav className="flex justify-between items-center py-6 w-[100%]">
-        <NavLink to="/">
-          <Logo />
-        </NavLink>
-        <ButtonOpenSidePanel onClick={() => { ref.current.style.width = "100vw" }} />
-        <Navbar />
+        <div className="w-[60%] md:w-full">
+          <NavLink to="/">
+            {screenSize >= "950" ? <LogoWideScreen /> : <LogoSmallScreen /> }
+          </NavLink>
+        </div>
+        <div className="w-[40%] md:w-full flex justify-end">
+          <ButtonOpenSidePanel onClick={() => { ref.current.style.width = "100vw" }} />
+          <Navbar />
+        </div>
       </nav> 
 
       </>

@@ -6,7 +6,6 @@ import emailjs from '@emailjs/browser';
 import Decoration from "../../assets/decoration/decoration"
 import Alt from "../alt/alt"
 import Footer from "../footer/footer"
-import Sidenavbar from "../navbar/sidenavbar"
 
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -14,6 +13,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 // import { toast, ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Title from "../containerNavbar/containerNavbar";
+import ContainerNavbar from "../containerNavbar/containerNavbar";
 
 let iconsContact = [
     {
@@ -93,15 +94,15 @@ function ContactsInfo() {
           
         <form className="flex flex-col gap-[20px] items-center md:items-start" ref={form} onSubmit={(e) => sendEmail(e)}> 
           <div className="flex gap-[10px]">
-            <input placeholder="nome" className="border-gray py-2 bg-[#F1F1F1] text-center" type="text" name="user_name" required value={name} onChange={(e) => setName(e.target.value)}/>
-            <input placeholder="cognome" className="border-gray py-2 bg-[#F1F1F1] text-center" type="text" name="user_last_name" required value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+            <input placeholder="nome" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="text" name="user_name" required value={name} onChange={(e) => setName(e.target.value)}/>
+            <input placeholder="cognome" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="text" name="user_last_name" required value={lastName} onChange={(e) => setLastName(e.target.value)}/>
           </div>
           <div className="flex gap-[10px]">
-            <input placeholder="email" className="border-gray py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <input placeholder="conferma email" className="border-gray py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)}/>
+            <input placeholder="email" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input placeholder="conferma email" className="border-gray rounded-md py-2 bg-[#F1F1F1] text-center" type="email" name="user_email" required value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)}/>
           </div>
           <div className="w-[100%] md:w-[90%] h-full h-[150px]">
-            <textarea placeholder="scrivi un messaggio per maggiori info....." className="border-gray py-2 px-2 bg-[#F1F1F1] w-[100%] h-[100%] max-h-[150px]" name="message" required value={message} onChange={(e) => setMessage(e.target.value)}/>
+            <textarea placeholder="scrivi un messaggio per maggiori info....." className="border-gray rounded-md py-2 px-2 bg-[#F1F1F1] w-[100%] h-[150px]" name="message" required value={message} onChange={(e) => setMessage(e.target.value)}/>
           </div>
           <input  type="submit" value="Invia" className="inline-block bg-pink-300 text-white capitalize rounded-full min-w-[180px] fit-content mx-auto py-2.5 px-3 my-8 cursor-pointer
                 hover:bg-pink-400 transition duration-200 linear text-center"  />
@@ -114,12 +115,7 @@ function Contacts() {
     return (
         <>
 
-        <div className="bg-pink-100">
-            <div className="container">
-                <Sidenavbar />
-                <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px] capitalize py-6">Contatti</h1>
-            </div>
-        </div>
+        <ContainerNavbar title="Contatti" />
 
         {/* Icone Contatti */}
 
@@ -146,7 +142,7 @@ function Contacts() {
 
         {/* Contatto Email  */}
 
-        <div className="container my-y-[1rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
+        <div className="container py-4 my-y-[1rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
             <div className="md:w-[60%]">
                 <div className="my-[2rem] md:my-[4rem] flex flex-col gap-4 ">
                     <h1 className="subheading text-brown-100 text-center md:text-left">prenota un appuntamento per rilassarti</h1>
@@ -158,8 +154,9 @@ function Contacts() {
                     <ToastContainer autoClose="1500" />
                 </div>
             </div>
-            <div className="w-[300px] h-[300px] bg-[#f1f1f1] mx-auto"></div>
+            <div className="my-[2rem] w-[300px] h-[300px] bg-[#f1f1f1] mx-auto"></div>
         </div>
+
 
         <div className="bg-pink-100 mt-2 md:mt-6">
             <Footer />

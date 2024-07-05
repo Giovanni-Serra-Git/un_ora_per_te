@@ -5,6 +5,7 @@ import Sidenavbar from "../navbar/sidenavbar"
 import Decoration from "../../assets/decoration/decoration";
 
 import Alt from "../alt/alt"
+import ContainerNavbar from "../containerNavbar/containerNavbar";
  
 
 const servizi = {
@@ -335,12 +336,7 @@ function Epilazione({item}) {
 function Services() {
     return (
         <>
-        <div className="bg-pink-100">
-            <div className="container">
-                    <Sidenavbar />
-                    <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px] capitalize py-6">servizi</h1>
-            </div>
-        </div>
+        <ContainerNavbar title="Servizi" />
 
         <div className="container">
             <div className="flex flex-col items-center">

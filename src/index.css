@@ -62,6 +62,11 @@
 
 @layer utilities {
 
+  .button {
+    @apply inline-block bg-pink-300 text-white capitalize rounded-full min-w-[180px] fit-content mx-auto py-2.5 px-3 my-8 cursor-pointer
+    hover:bg-pink-400 transition duration-200 linear text-center
+  }
+
     .mx-auto {
         margin-inline: auto;
     }

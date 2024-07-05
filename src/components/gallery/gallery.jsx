@@ -1,4 +1,5 @@
 import Button from "../button/button"
+import ContainerNavbar from "../containerNavbar/containerNavbar"
 import Sidenavbar from "../navbar/sidenavbar"
 import SimpleSlider from "../slider/simpleSlider"
 
@@ -20,11 +21,10 @@ const ufficio = [
 
 function Gallery() {
     return (
-        <div className="bg-pink-100">
-        <div className="container">
-            <Sidenavbar />
-            <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px] capitalize py-6">Galleria</h1>
-        </div>
+        
+        <>
+
+        <ContainerNavbar title="galleria" />
 
         <div className="gradient-pink text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
@@ -44,7 +44,7 @@ function Gallery() {
             <Button url="/servizi" title="scopri di più" />
         </div>
 
-    </div>
+    </>
 
     )
 }
