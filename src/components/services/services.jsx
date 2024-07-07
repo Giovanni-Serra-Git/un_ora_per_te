@@ -13,7 +13,7 @@ const servizi = {
     viso: {
         title: "viso",
         subTitle: "Trattamenti singoli o percorsi a seconda del tipo di inestetismo del viso",
-        urlPicture: "../../assets/servizi/viso.png",
+        urlPicture: "../../assets/servizi/viso.jpg",
         pictureAltDescription: "Immagine trattamento viso donna",
         listServices: {
             viso: [

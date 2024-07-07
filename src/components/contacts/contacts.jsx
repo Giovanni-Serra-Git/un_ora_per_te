@@ -120,7 +120,7 @@ function Contacts() {
         {/* Icone Contatti */}
 
         <div className="w-[80%] my-y-[1rem]  md:w-[85%] mx-auto md:my-[6rem]">
-            <div className="flex flex-col gap-y-5 items-center my-6 md:flex-row md:justify-between md:my-[2rem]">
+            <div className="flex flex-col w-[50%] mx-auto gap-y-4 my-6 md:w-full mx-0 md:flex-row md:justify-between md:my-[2rem]">
                 {
                     iconsContact.map((item,index) => {
                         return (
