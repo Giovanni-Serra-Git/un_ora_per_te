@@ -124,7 +124,7 @@ function Contacts() {
                 {
                     iconsContact.map((item,index) => {
                         return (
-                            <div key={index} className="flex items-center gap-4 md:gap-6">
+                            <div key={index} className="flex items-center gap-2 md:gap-6">
                                 <div className="max-w-[60px]">
                                     <img src={item.iconUrl} alt={Alt + item.iconAltDescription} />
                                 </div>
