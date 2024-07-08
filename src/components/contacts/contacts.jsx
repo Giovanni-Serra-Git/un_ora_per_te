@@ -120,11 +120,11 @@ function Contacts() {
         {/* Icone Contatti */}
 
         <div className="container my-[1rem] md:my-[4rem]">
-            <div className="flex flex-col w-[50%] gap-y-8 mx-auto md:flex md:flex-row md:w-[90%] md:justify-center md:items-center md:gap-[3.125rem]">
+            <div className="block w-[50%] gap-y-8 mx-auto md:flex md:flex-row md:w-[90%] md:justify-center md:items-center md:gap-[3.125rem]">
                 {
                     iconsContact.map((item,index) => {
                         return (
-                            <div key={index} className="flex items-center gap-x-4 md:my-0 gap-0">
+                            <div key={index} className="my-8 flex items-center gap-x-4 md:my-0 gap-0">
                                 <div className="max-w-[60px]">
                                     <img src={item.iconUrl} alt={Alt + item.iconAltDescription} />
                                 </div>
