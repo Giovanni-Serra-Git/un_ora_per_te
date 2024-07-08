@@ -40,14 +40,6 @@ const gallery = [
         url: "../../../assets/homepage/trattamenti/viso.png",
         title: "pulizia viso",
     },
-    {
-        url: "../../../assets/homepage/trattamenti/viso.png",
-        title: "pulizia viso",
-    },
-    {
-        url: "../../../assets/homepage/trattamenti/viso.png",
-        title: "pulizia viso",
-    }
 ]
 
 function HomePage() { 
