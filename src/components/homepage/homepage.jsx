@@ -25,10 +25,6 @@ const trattamenti = [
 
 const gallery = [
     {
-        url: "../../../assets/homepage/trattamenti/pietre.png",
-        title: "massaggio pietre calde",
-    },
-    {
         url: "../../../assets/homepage/trattamenti/epilazione.png",
         title: "epilazione corpo",
     },
@@ -39,6 +35,10 @@ const gallery = [
     {
         url: "../../../assets/homepage/trattamenti/viso.png",
         title: "pulizia viso",
+    },
+    {
+        url: "../../../assets/homepage/trattamenti/pietre.png",
+        title: "massaggio pietre calde",
     },
 ]
 
@@ -146,7 +146,7 @@ function HomePage() {
                             <span className="font-bold">Il lipolaser</span> riduce il grasso localizzato in modo non invasivo, rimodellando il corpo.<br></br>
                             <span className="font-bold">La pressoterapia</span> stimola il drenaggio linfatico, migliorando la circolazione e alleviando la ritenzione idrica.<br></br>
                             <span className="font-bold">Il laser a diodo</span> offre un'epilazione permanente sicura ed efficace per tutti i tipi di pelle.<br></br>
-                            <span className="font-bold">Il Starvac combina</span> aspirazione e massaggio per migliorare la tonicità della pelle e ridurre la cellulite.<br></br>
+                            <span className="font-bold">Lo Starvac </span>combina aspirazione e massaggio per migliorare la tonicità della pelle e ridurre la cellulite.<br></br>
                             Queste tecnologie avanzate ci permettono di soddisfare le esigenze estetiche dei nostri clienti in modo sicuro ed efficace.</p>
 
                     </div>
