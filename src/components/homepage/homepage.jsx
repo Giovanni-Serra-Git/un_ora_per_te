@@ -18,6 +18,8 @@ const trattamenti = [
     "../../assets/gallery/mani.jpg",
     "../../assets/gallery/mani.jpg",
     "../../assets/gallery/mani.jpg",
+    "../../assets/gallery/mani.jpg",
+    "../../assets/gallery/mani.jpg",
 ]
 
 
@@ -33,6 +35,14 @@ const gallery = [
     {
         url: "../../../assets/homepage/trattamenti/mani.png",
         title: "manicure",
+    },
+    {
+        url: "../../../assets/homepage/trattamenti/viso.png",
+        title: "pulizia viso",
+    },
+    {
+        url: "../../../assets/homepage/trattamenti/viso.png",
+        title: "pulizia viso",
     },
     {
         url: "../../../assets/homepage/trattamenti/viso.png",
@@ -73,7 +83,7 @@ function HomePage() {
 
             {/* TRATTAMENTI PERSONALIZZATI */}  
 
-            <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20 lg-items-start">
+            {/* <div className="container w-[95%] flex flex-col bg-pink-100 rounded-lg mt-[-20vh] relative z-20 lg-items-start">
                 <div className="lg:w-[95%] lg:ml-auto">
                     <p className="subheading capitalize mt-6 mb-6 text-center text-brown-100 lg:text-left">trattamenti personalizzati</p>
                     <Decoration props="hidden mx-auto fit-content mb-6 md:block lg:w-[100%]" />
@@ -84,7 +94,20 @@ function HomePage() {
                          }
                     </div>  
                     <Button title="scopri i nostri trattamenti" url="/servizi" />
+            </div> */}
+
+            <div className="container w-[95%] flex flex-col items-center bg-pink-100 rounded-lg mt-[-20vh] relative z-20">
+                <div className="lg:w-[95%] lg:ml-auto my-[1rem] md:my-[2rem]">
+                    <p className="subheading capitalize mt-6 mb-6 text-center text-brown-100">trattamenti personalizzati</p>
+                    <Decoration props="hidden mx-auto fit-content mb-6" />
                 </div>
+                <div className="flex flex-col gap-y-[2rem] w-[80%] items-center md:flex md:flex-row w-[100%] md:flex-wrap md:justify-center md:gap-x-[0.8rem] md:gap-y-[1.5rem] lg:w-[90%]">
+                    { 
+                        gallery.map((item, index) => <ItemGallery key={index} src={item.url} title={item.title} />)
+                    }
+                </div>  
+                    <Button title="scopri i nostri trattamenti" url="/servizi" />
+            </div>
 
             <div className="container md:flex">
                 <div className="container flex flex-col items-center lg:items-start">
