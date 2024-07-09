@@ -53,7 +53,7 @@ function HomePage() {
             <div className="bg-pink-100 relative">
                 <div className="container text-center flex flex-col items-center">
                     <Sidenavbar/>
-                    <div className="flex flex-col items-center md:flex-row md:justify-between">
+                    <div className="flex flex-col items-center md:flex-row md:justify-between mt-[2rem] md:mt-[4rem]">
 
                         <div className="md:basis-[60%] md:text-left z-40">
                             <h1 className="heading-playfair my-10 md:my-5 md:leading-[55px]">Ci prendiamo cura della 
