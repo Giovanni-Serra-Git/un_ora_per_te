@@ -187,7 +187,7 @@ function HomePage() {
                         return (
                             <div key={index} className="mx-[0.5rem]">
                                 <img className="my-[auto]"  src={item.url} alt={Alt + "trattamenti personal"} />
-                                <p className="clamp-playfair-normal text-center font-bold text-white py-[0.5rem] md:py-[1rem]">{item.description}</p>
+                                <p className="clamp-poppins uppercase text-center font-bold text-white py-[0.5rem] md:py-[1rem]">{item.description}</p>
                             </div>
                         )
                         })}

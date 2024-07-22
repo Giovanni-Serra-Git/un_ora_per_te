@@ -92,8 +92,8 @@ function Gallery() {
                 {trattamenti.map((item,index) => {
                         return (
                             <div key={index} className="mx-[0.5rem]">
-                                <img className="my-[auto]"  src={item.url} alt={Alt + "trattamenti personal"} />
-                                <p className="poppins clamp-poppins-normal text-center text-white text-bold py-[0.5rem] md:py-[1rem] bg-pink-300 my-[0.5rem] md:my-[0.8rem]">{item.description}</p>
+                                <img className="my-[auto] mx-[auto]"  src={item.url} alt={Alt + "trattamenti personal"} />
+                                <p className="poppins clamp-poppins uppercase text-center text-white text-bold py-[1rem] bg-pink-300 my-[0.5rem] md:my-[0.8rem] font-bold">{item.description}</p>
                             </div>
                         )
                     })}
