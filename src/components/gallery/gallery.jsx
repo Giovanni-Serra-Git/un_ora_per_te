@@ -77,15 +77,15 @@ function Gallery() {
         <div className="gradient-pink text-white text-center pt-6 pb-6">
                     <div className="container flex flex-col items-center">
                         <div>
-                            <p className="subheading capitalize pt-8 pb-8">galleria foto</p>
+                            <p className="subheading capitalize pt-8 pb-8">esplora foto</p>
                         </div>
-                        <p className="poppins text-white leading-[140%] font-normal clamp-poppins-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p className="poppins text-white leading-[140%] clamp-poppins-normal font-600">Di seguito una lista delle foto di parte dei trattamenti e di interni del centro estetico</p>
                     </div>
         </div>
         <div className="w-[90%] mx-auto my-[1rem] md:my-[3rem]">
             <div className="my-[1rem] md:my-[2rem]">
                 <p className="subheading capitalize pt-8 pb-8 text-brown-100 text-center">trattamenti</p>
-                <p className="clamp-playfair-normal text-center font-bold">( lista completa con relativi prezzi nella sezione <NavLink to="/servizi"><span className="text-pink-300 font-bold underline">servizi</span></NavLink> )</p>
+                <p className="clamp-playfair-normal text-center font-bold">Lista completa con relativi prezzi nella sezione <NavLink to="/servizi"><span className="text-pink-300 font-bold underline">servizi</span></NavLink></p>
             </div>
             
             <Carousel responsive={responsive}>
