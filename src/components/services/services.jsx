@@ -36,6 +36,11 @@ const servizi = {
                     title: "Trattamento VIP microneedling",
                     description: "trattamento con effetto immediato antiage con uso di penna microneedling e prodotti specifici e fili di collagene",
                     price: "€80",
+                },
+                {
+                    title: "Trattamento acido glicolico",
+                    description: "Trattamento e macchie discromie con acido glicolico",
+                    price: "€40",
                 }
             ],
             ciglia: {

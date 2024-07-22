@@ -11,15 +11,25 @@ import "slick-carousel/slick/slick-theme.css";
 import Decoration from "../../assets/decoration/decoration"
 
 import Alt from "../alt/alt"
-import SimpleSlider from "../slider/simpleSlider";
+import Carousel from "react-multi-carousel";
 
-const trattamenti = [
-    "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/mani.jpg",
-    "../../assets/gallery/mani.jpg",
+const macchinari = [
+    {
+        url: "../../assets/homepage/macchinari/starvac.jpg",
+        description: "Starvac"
+    },
+    {
+        url: "../../assets/homepage/macchinari/laser.jpg",
+        description: "Laser"
+    },
+    {
+        url: "../../assets/homepage/macchinari/lipolaser.jpg",
+        description: "Lipolaser"
+    },
+    {
+        url: "../../assets/homepage/macchinari/starvac.jpg",
+        description: "Starvac"
+    },
 ]
 
 
@@ -41,6 +51,27 @@ const gallery = [
         title: "massaggio pietre calde",
     },
 ]
+
+const responsive = {
+    superLargeDesktop: {
+  
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 700, min: 0 },
+      items: 1
+    }
+  };
+  
 
 function HomePage() { 
 
@@ -150,8 +181,17 @@ function HomePage() {
                             Queste tecnologie avanzate ci permettono di soddisfare le esigenze estetiche dei nostri clienti in modo sicuro ed efficace.</p>
 
                     </div>
-                    <div className="container bg-brown-100"> 
-                        {/* <SimpleSlider  images={trattamenti} props={{ slideToShow: "2", slideToScroll: "2"}} /> */}
+                    <div className="container bg-brown-100 my-[3rem] md:my-[2rem]"> 
+                    <Carousel responsive={responsive}>
+                        {macchinari.map((item,index) => {
+                        return (
+                            <div key={index} className="mx-[0.5rem]">
+                                <img className="my-[auto]"  src={item.url} alt={Alt + "trattamenti personal"} />
+                                <p className="clamp-playfair-normal text-center font-bold text-white py-[0.5rem] md:py-[1rem]">{item.description}</p>
+                            </div>
+                        )
+                        })}
+                    </Carousel>
                         <Button url="/servizi" title="scopri di più" />
                     </div>
                 </div>

@@ -1,0 +1,9 @@
+.react-multi-carousel-track li {
+    margin-block: auto;
+}
+
+.react-multi-carousel-track li img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+}
