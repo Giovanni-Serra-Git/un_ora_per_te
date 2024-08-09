@@ -13,6 +13,7 @@ import Error from './components/error/error.jsx';
 import About from './components/about/about.jsx';
 import Gallery from './components/gallery/gallery.jsx';
 import Contacts from './components/contacts/contacts.jsx';
+import Policy from './components/policy/policy.jsx';
 
 
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/contatti",
     element: <Contacts />
+  },
+  {
+    path: "/policy",
+    element: <Policy />
   }
 ]);
 

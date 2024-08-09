@@ -1,6 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import LogoSmallScreen from "../navbar/logoSmallScreen";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
     return (
@@ -9,8 +9,8 @@ function Footer() {
                 <div className="flex flex-col gap-1 md:gap-2">
                     {/* <LogoSmallScreen /> */}
                     <p className="poppins clamp-poppins-normal text-pink-300 font-bold">Estetica un'ora per te@ tutti i diritti riservati</p>
-                    <p className="poppins clamp-poppins-normal text-pink-300 uppercase font-bold">p.iva 0*********7</p>
-                    <p className="poppins clamp-poppins-normal text-pink-300 uppercase font-bold">privacy policy</p>
+                    <p className="poppins clamp-poppins-normal text-pink-300 uppercase font-bold">p.iva 01681330088</p>
+                    <NavLink to="/policy"><p className="poppins clamp-poppins-normal text-pink-300 uppercase font-bold">privacy policy</p></NavLink>
 
                 </div>
                 <div className="w-[50%] md:w-[60%] flex gap-2 justify-center gap-2 md:justify-end">

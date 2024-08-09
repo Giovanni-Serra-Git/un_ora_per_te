@@ -155,14 +155,14 @@ function HomePage() {
                             </div>
                             <div className="relative">
                                  <img src="../../../assets/homepage/staff/arco_scuro.png" alt={`${Alt} Immagine di una porta ad arco chiara`} />
-                                 <img className="absolute bottom-0 left" src="../../../assets/homepage/staff/staff.png" alt={`${Alt} Immagine del personale lavorativo`} />
+                                 <img className="absolute bottom-0 left-[50%] translate-x-[-50%] center max-w-[300px]" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
                             </div> 
                         </div>
                 </div>
 
             </div>
  
-            {/* MACCHINARI AD ALTA TECNOLOGIA */}
+            {/* MACCHINARI AD ALTA TECNOLOGIA */} 
 
 
             <div className="bg-brown-100 text-white text-center pt-6 pb-6">
