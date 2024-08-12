@@ -155,7 +155,7 @@ function Contacts() {
                 </div>
             </div>
             <div className="my-[2rem] w-[80%] md:w-[60%] h-[40vh] flex justify-center mx-auto">
-                <img src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
+                <img className="object-cover" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
             </div>
         </div>
 
