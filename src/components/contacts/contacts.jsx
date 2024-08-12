@@ -154,7 +154,9 @@ function Contacts() {
                     <ToastContainer autoClose="1500" />
                 </div>
             </div>
-            <div className="my-[2rem] w-[60vw] h-[40vh] bg-[#f1f1f1] mx-auto">foto qui</div>
+            <div className="my-[2rem] w-[80%] md:w-[60%] h-[40vh] flex justify-center mx-auto">
+                <img src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
+            </div>
         </div>
 
 

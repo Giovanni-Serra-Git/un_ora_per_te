@@ -15,8 +15,10 @@ function Footer() {
                 </div>
                 <div className="w-[50%] md:w-[60%] flex gap-2 justify-center gap-2 md:justify-end">
                     {/* DA METTERE GLI URL NELLE ICONE */}
-                    <FaFacebook className="text-pink-300 hover:text-pink-400 duration-200 text-[24px] cursor-pointer" />
-                    <FaInstagram className="text-pink-300 hover:text-pink-400 duration-200 text-[24px] cursor-pointer" />
+                    <NavLink to="https://www.facebook.com/Unorapertesanremo?rdid=6K14CVcUHIwDIGUQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FZrbDpXS2NyRGLKTs%2F" target="_blank">
+                        <FaFacebook className="text-pink-300 hover:text-pink-400 duration-200 text-[24px] cursor-pointer" />
+                    </NavLink> 
+                    {/* <FaInstagram className="text-pink-300 hover:text-pink-400 duration-200 text-[24px] cursor-pointer" /> */}
                 </div>
             </div>
 
