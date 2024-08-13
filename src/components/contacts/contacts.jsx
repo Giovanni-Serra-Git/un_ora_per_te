@@ -20,7 +20,7 @@ let iconsContact = [
     {
         iconUrl: "../../assets/contatti/email.png",
         iconTitle: "email",
-        iconDetails: "Mary.tav@gmail.com",
+        iconDetails: "mary.tav@gmail.com",
         iconAltDescription: "icona dell'email"
     },
     {
@@ -190,7 +190,7 @@ function Contacts() {
                 </div>
                 <div>
                     <ContactsInfo />
-                    <ToastContainer autoClose="1500" />
+                    <ToastContainer autoClose="1500" /> 
                 </div>
             </div>
             <div className="my-[2rem] w-[80%] md:w-[60%] h-[40vh] flex justify-center mx-auto">
