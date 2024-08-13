@@ -149,13 +149,13 @@ function HomePage() {
                         <img src="../../../assets/homepage/staff/stone.png" alt={`${Alt}Immagine di pietre da massaggio in pila`} />
                     </div>
 
-                        <div className="relative w-[60%] fit-content">
+                        <div className="relative w-[60%] fit-content"> 
                             <div className="absolute left-[-10%] bottom-0 -z-1">
                                 <img src="../../../assets/homepage/staff/arco_chiaro.png" alt={`${Alt} Immagine di una porta ad arco scura`} />
                             </div>
                             <div className="relative">
                                  <img src="../../../assets/homepage/staff/arco_scuro.png" alt={`${Alt} Immagine di una porta ad arco chiara`} />
-                                 <img className="absolute bottom-0 left-[50%] translate-x-[-50%] center max-w-[300px]" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
+                                 <img className="object-cover absolute bottom-0 left-[50%] translate-x-[-50%] center max-w-[300px]" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
                             </div> 
                         </div>
                 </div>
@@ -181,7 +181,7 @@ function HomePage() {
                             Queste tecnologie avanzate ci permettono di soddisfare le esigenze estetiche dei nostri clienti in modo sicuro ed efficace.</p>
 
                     </div>
-                    <div className="container bg-brown-100 my-[3rem] md:my-[2rem]"> 
+                    <div className="container bg-brown-100 my-[3rem] md:my-[2rem]">  
                     <Carousel responsive={responsive}>
                         {macchinari.map((item,index) => {
                         return (

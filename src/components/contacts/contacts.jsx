@@ -20,13 +20,13 @@ let iconsContact = [
     {
         iconUrl: "../../assets/contatti/email.png",
         iconTitle: "email",
-        iconDetails: "email@gmail.com",
+        iconDetails: "Mary.tav@gmail.com",
         iconAltDescription: "icona dell'email"
     },
     {
         iconUrl: "../../assets/contatti/phone.png",
         iconTitle: "cellulare",
-        iconDetails: "+39 333 333 333",
+        iconDetails: "+39 333 468 9022",
         iconAltDescription: "icona del cellulare"
     },
     {
@@ -35,6 +35,29 @@ let iconsContact = [
         iconDetails: "via Lamarmora 184",
         iconAltDescription: "icona dell' indirizzo"
     }
+]
+
+let orari = [
+    {
+        giorno: "Lunedì",
+        orario: "9-18"
+    },
+    {
+        giorno: "Mercoledì",
+        orario: "9-18"
+    },
+    {
+        giorno: "Venerdì",
+        orario: "9-18"
+    },
+    {
+        giorno: "Sabato",
+        orario: "9-13"
+    },
+    {
+        giorno: "Domenica",
+        orario: "chiuso"
+    },
 ]
 
 function ContactsInfo() {
@@ -140,7 +163,23 @@ function Contacts() {
             </div>
         </div>
 
-        {/* Contatto Email  */}
+        <div className="container">
+            <h1 className="text-center heading-playfair my-10 md:text-left md:my-5 md:leading-[55px] capitalize py-6">Orari</h1>
+            <div className="flex-col md:flex md:flex-row md:justify-between">
+                { 
+                    orari.map((item,index) => {
+                        return (
+                            <div key={index} className="my-[1.5rem] flex flex-col items-center md:my-[1rem]">
+                                <p className="text-left md:text-center clamp-poppins-normal text-pink-300 font-bold first-letter:uppercase">{item.giorno}</p>
+                            <p className="font-bold">{item.orario}</p>
+                        </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+
+        {/* Contatto Email  */} 
 
         <div className="container py-4 my-[2rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
             <div className="md:w-[60%]">
