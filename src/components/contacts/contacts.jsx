@@ -68,6 +68,8 @@ function ContactsInfo() {
     const [email, setEmail] = useState("");
     const [confirmEmail, setConfirmEmail] = useState("");
     const [message,setMessage] = useState(""); 
+    const [checkBox, setCheckBox] = useState("")
+    const [isBoxChecked, setIsBoxChecked] = useState(true)
     
     const SERVICE_ID = "service_os2nylo";
     const TEMPLATE_ID = "template_oynrfec";
@@ -82,6 +84,12 @@ function ContactsInfo() {
         setEmail("")
         setConfirmEmail("")
         setMessage("")
+
+        if (checkBox != true) {
+            alert()
+            setIsBoxChecked(false)
+            return
+        }
 
         if (email != confirmEmail) {
             let emailToastify = "Le email non combaciano";
@@ -98,6 +106,8 @@ function ContactsInfo() {
     .then(
       () => {
         console.log('SUCCESS!');
+        setIsBoxChecked(true)
+        setCheckBox("")
         toast.success("Messaggio Inviato !", {
             position: "top-right",
         });
@@ -126,6 +136,12 @@ function ContactsInfo() {
           </div>
           <div className="w-[100%] md:w-[90%] h-full h-[150px]">
             <textarea placeholder="scrivi un messaggio per maggiori info....." className="border-gray rounded-md py-2 px-2 bg-[#F1F1F1] w-[100%] h-[150px]" name="message" required value={message} onChange={(e) => setMessage(e.target.value)}/>
+          </div>
+          <div>
+          <input className="mx-[1rem]" checked={checkBox} type="checkbox" onChange={() => setCheckBox( checked => !checked)} />
+          <span>Accetto il trattamento dei dati personali</span>
+          {!isBoxChecked ? <p className="text-red-500">Spunta la casella per il trattamento dei dati personali</p> : ""}
+          
           </div>
           <input  type="submit" value="Invia" className="inline-block bg-pink-300 text-white capitalize rounded-full min-w-[180px] fit-content mx-auto py-2.5 px-3 my-8 cursor-pointer
                 hover:bg-pink-400 transition duration-200 linear text-center"  />
