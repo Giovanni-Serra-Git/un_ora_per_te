@@ -86,7 +86,6 @@ function ContactsInfo() {
         setMessage("")
 
         if (checkBox != true) {
-            alert()
             setIsBoxChecked(false)
             return
         }
