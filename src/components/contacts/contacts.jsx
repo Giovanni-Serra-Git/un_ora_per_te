@@ -26,7 +26,7 @@ let iconsContact = [
     {
         iconUrl: "../../assets/contatti/phone.png",
         iconTitle: "cellulare",
-        iconDetails: "+39 333 468 9022",
+        iconDetails: "+39 351 808 6676",
         iconAltDescription: "icona del cellulare"
     },
     {
@@ -214,7 +214,7 @@ function Contacts() {
         </div>
 
 
-        <div className="bg-pink-100 mt-2 md:mt-6">
+        <div className="bg-pink-100 mt-2 md:mt-6"> 
             <Footer />
         </div>
         </>
