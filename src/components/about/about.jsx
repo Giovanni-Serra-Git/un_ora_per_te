@@ -108,8 +108,8 @@ function About() {
                 <Button url="/contatti" title="contatti" />
             </div>
             <div className="md:w-[50%] flex flex-col items-center justify-center">
-                <div className="border-image px-4 rounded-lg">
-                <img src="../../../assets/homepage/staff/staff.png" alt={`${Alt} Immagine del personale lavorativo`} />
+                <div className="border-image">
+                <img src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
                 </div>
             </div>
         </div>

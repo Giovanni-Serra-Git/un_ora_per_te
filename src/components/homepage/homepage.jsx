@@ -140,17 +140,22 @@ function HomePage() {
                         <Decoration props="hidden md:block fit-content mx-auto mb-6 lg:w-[100%]" />
                     </div>
                     <p className="poppins text-brown-100 leading-[140%] font-normal clamp-poppins-normal">Nel nostro centro estetico, il personale altamente qualificato è rappresentato da una professionista dedicata e competente.<br></br>Con anni di esperienza e formazione specializzata, offre una gamma completa di trattamenti di bellezza e benessere personalizzati.<br></br>Sempre aggiornata sulle ultime tecniche e tendenze, assicura risultati eccellenti e un'esperienza di cura unica per ogni cliente.<br></br>La sua missione è far sentire ogni persona accolta e valorizzata, riflettendo una profonda passione per il benessere e la bellezza.</p>
-                    <Button url="/chi-siamo" title="conosci lo staff" />
+                    <Button url="/chi-sono" title="conosci lo staff" />
                 </div>
 
                {/* STAFF */}
-                <div className="container flex items-center justify-between mt-10 mb-10">
-                    <div className="w-[40%] self-end">
+                <div className="container flex items-center justify-center md:justify-between mt-10 mb-10">
+                <img className="block md:hidden object-cover max-w-[300px]" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
+
+                    <div className="hidden md:block w-[40%] self-end">
                         <img src="../../../assets/homepage/staff/stone.png" alt={`${Alt}Immagine di pietre da massaggio in pila`} />
                     </div>
+                    {/* <div className="hidden md:block relative w-[60%] fit-content"> 
 
-                        <div className="relative w-[60%] fit-content"> 
-                            <div className="absolute left-[-10%] bottom-0 -z-1">
+                    </div> */}
+
+                        <div className="hidden md:block relative w-[60%] fit-content"> 
+                            <div className="relative md:block md:absolute md:left-[-10%] md:bottom-0 -z-1">
                                 <img src="../../../assets/homepage/staff/arco_chiaro.png" alt={`${Alt} Immagine di una porta ad arco scura`} />
                             </div>
                             <div className="relative">
@@ -206,7 +211,6 @@ function HomePage() {
                         <Decoration props="hidden md:block fit-content mx-auto mb-6" />
                     </div>
                     <p className="poppins text-brown-100 leading-[140%] clamp-poppins-normal md:w-[65%]">Il nostro centro estetico si impegna a mantenere i più alti standard di sicurezza e igiene.<br></br>Ogni trattamento viene eseguito utilizzando strumenti sterilizzati e prodotti di alta qualità per garantire la massima protezione.<br></br>Le superfici sono regolarmente disinfettate e l'ambiente è mantenuto pulito e sicuro.<br></br>La salute e il benessere dei nostri clienti sono la nostra priorità assoluta.</p>
-                    <Button url="/chi-siamo" title="scopri di più" />
                     <div>
                         <img src="../../assets/homepage/igiene_e_sicurezza/plant.png"
                          alt={Alt + "Immagine di una pianta"}

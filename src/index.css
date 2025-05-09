@@ -34,7 +34,7 @@
 .heading-playfair {
   font-family: theme("fontFamily.PlayFair");
   font-style: italic;
-  font-size: clamp(40px, calc(40px + (56 - 40) * ((100vw - 350px) / (1024 - 350))), 56px);
+  font-size: clamp(20px, calc(20px + (34 - 20) * ((100vw - 350px) / (1024 - 350))), 34px);
   color: theme("colors.brown.100");
   font-weight: 700;
 }

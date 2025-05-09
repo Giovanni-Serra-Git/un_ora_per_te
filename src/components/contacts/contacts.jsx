@@ -196,8 +196,8 @@ function Contacts() {
 
         {/* Contatto Email  */} 
 
-        <div className="container py-4 my-[2rem] md:my-[6rem] flex flex-col md:flex md:flex-row md:items-center box-shadow-pink px-8">
-            <div className="md:w-[60%]">
+        <div className="container flex justify-center">
+            <div className="w-[90%] md:w-[70%]">
                 <div className="my-[2rem] md:my-[4rem] flex flex-col gap-4 ">
                     <h1 className="subheading text-brown-100 text-center md:text-left">prenota un appuntamento per rilassarti</h1>
                     <Decoration />
@@ -208,9 +208,9 @@ function Contacts() {
                     <ToastContainer autoClose="1500" /> 
                 </div>
             </div>
-            <div className="my-[2rem] w-[80%] md:w-[60%] h-[40vh] flex justify-center mx-auto">
+            {/* <div className="my-[2rem] w-[80%] md:w-[60%] h-[40vh] flex justify-center mx-auto">
                 <img className="object-cover" src="../../../assets/homepage/staff/mariagrazia.jpg" alt={`${Alt} Immagine del personale lavorativo`} />
-            </div>
+            </div> */}
         </div>
 
 
